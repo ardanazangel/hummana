@@ -1,42 +1,187 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
+*{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --light-color: #ffffff;
+  --dark-color: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+ul,li{
+  list-style: none;
+}
+
+
+img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Loading fonts */
+
+@font-face {
+  font-family: 'Andale';
+  src: url('../fonts/Andale-Mono.woff2');
+}
+
+/* Hero Section */
+
+.video-wrapper{
+  background-color: #333;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+video{
+  filter: brightness(0.75);
+
+}
+
+.hero-content-section{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-first{
+  height: 100vh;
+}
+
+h1{
+  font-family: 'Andale';
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: -0.1vw;
+}
+
+h2{
+  font-family: 'Andale';
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: -0.15rem;
+  text-transform: uppercase;
+}
+
+.white-type{
+  color: var(--light-color);
+}
+
+.hero-title{
+  text-transform: uppercase;
+}
+
+/* About Section */
+
+.about-section{
+  height: 1000vh;
+  position: relative;
+}
+
+.message{
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-content{
+  font-family: 'Andale';
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: -0.25rem;
+  position: absolute;
+  max-width: 40%;
+  opacity: 1;
+  text-transform: uppercase;
+  line-height: 0.9em;
+  opacity: 1;
+}
+
+.scroller-wrapper{
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  padding-bottom: 4rem;
+}
+
+.scroller-tracker{
+  width: 1.5px;
+  height: 20vh;
+  position: sticky;
+  top: 75%;
+  bottom: 2rem;
+  left: 50%;
+  opacity: 1;
+}
+
+.scroller-opacity{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  position: absolute;
+}
+
+.scroller{
+  width: 100%;
+  height: 50%;
+  background-color: var(--light-color);
+  opacity: 1;
+  z-index: 9999999999;
+  position: absolute;
+}
+
+/*Mentorships vs Retreats */
+
+.mentorships-retreats-wrapper{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card{
+  width: 25vw;
+  position: absolute;
+  background-color: white;
+  aspect-ratio: 3/4;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  clip-path: polygon(
+    0 50%,
+    100% 50%,
+    100% 50%,
+    0 50%
+  ); /* Inicialmente oculta todo el contenido */
+  transition: all 1s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+}
+
+.part-wrapper:hover .card {
+  clip-path: polygon(
+    0 100%,
+    100% 100%,
+    100% 0,
+    0 0
+  ); /* Revela todo el contenido */
 }

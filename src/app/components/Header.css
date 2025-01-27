@@ -1,0 +1,33 @@
+.navbar{
+    padding: 2rem;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-element{
+    font-family: 'Andale';
+    font-weight: 200;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.center{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.inner-pages-wrapper{
+    display: flex;
+    gap: 4rem;
+}
