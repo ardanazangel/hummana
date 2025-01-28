@@ -4,6 +4,7 @@ import "./globals.css";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
 import Header from "@/app/components/Header";
+import Footer from "./components/Footer";
 
 export default function RootLayout({ children }) {
   const lenisRef = useRef(null); // Referencia de Lenis
@@ -11,7 +12,7 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     // Inicializa Lenis (scroll suave)
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.5,
       smooth: true,
       direction: "vertical",
       smoothTouch: true,
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

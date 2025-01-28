@@ -1,10 +1,11 @@
 import styles from "./page.module.css";
 import Hero from "./components/Hero";
-import AboutSection from "./components/AboutSection";
 import MentorshipsRetreats from "./components/MentorshipsRetreats";
+import Values from "./components/Values";
 
 export default function Home() {
   return (
+    <>
     <div id="total-wrapper">
       <section id="hero-section">
         <div className="video-wrapper">
@@ -14,10 +15,12 @@ export default function Home() {
           </video>
         </div>
           <Hero />
-          <AboutSection />
       </section>
       <MentorshipsRetreats />
-
+      <Values />
     </div>
+
+      </>
+
   );
 }
