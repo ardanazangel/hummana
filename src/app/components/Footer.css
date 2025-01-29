@@ -1,7 +1,10 @@
 .footer-section{
     height: 100vh;
     background-color: var(--light-color);
+    z-index: 20;
+    color: var(--dark-color);
 }
+
 
 .footer-grid{
     display: grid;
@@ -12,11 +15,24 @@
 .footer-info{
     width: 100%;
     height: 100%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 0rem 1.5rem 0rem 1.5rem;
+    text-align: center;
+}
+
+.footer-info-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    gap: 1rem;
+    gap: 2rem;
+    grid-column: 2 / 6; /* Ocupa desde la columna 2 hasta la 5 */
+}
+
+.logo-wrapper-footer{
+    max-width: 80%;
 }
 
 .footer-tag{
@@ -42,4 +58,6 @@
     font-size: 1.75rem;
     font-family: 'Andale';
     letter-spacing: -0.15rem;
+
 }
+

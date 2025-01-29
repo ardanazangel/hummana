@@ -3,9 +3,9 @@
     height: 5rem;
     position: fixed;
     top: 0;
-    z-index: 999;
+    z-index: 9999999999999999999999;
     width: 100%;
-
+    color: var(--light-color);
 }
 
 ul{
@@ -28,4 +28,9 @@ ul{
 .inner-pages-wrapper{
     display: flex;
     gap: 4rem;
+}
+
+a{
+    color: var(--light-color);
+text-decoration: none;
 }

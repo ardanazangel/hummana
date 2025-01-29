@@ -12,20 +12,6 @@
     position: relative;
 }
 
-.value-1{
-    background-color: red;
-}
-
-.value-2{
-    background-color: blue;
-}
-.value-3{
-    background-color: green;
-}
-.value-4{
-    background-color: var(--dark-color);
-}
-
 .section-central-tracker{
     position: sticky;
     width: 100%;
@@ -41,7 +27,6 @@
 .central-image-wrapper{
     width: 20vw;
     aspect-ratio: 3/4;
-    background-color: purple;
     position: relative;
     overflow: hidden;
 }
@@ -57,21 +42,10 @@
 .central-image{
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
-.first{
-    background-color: blueviolet;
-}
 
-.second{
-    background-color: green;
-}
-.third{
-    background-color: red;
-}
-.fourth{
-    background-color: blue;
-}
 
 .central-titles-wrapper{
     width: 30%;
@@ -85,6 +59,11 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
+}
+
+ .value-title span{
+    width: 100%;
+
 }
 
 .central-titles-tracker{

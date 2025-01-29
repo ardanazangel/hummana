@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -8,6 +8,9 @@ import "./Header.css";
 
 export default function Header() {
   useEffect(() => {
+    // Asegúrate de que estamos en el cliente
+    if (typeof window === "undefined") return;
+
     // Registramos el plugin ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
@@ -23,17 +26,25 @@ export default function Header() {
       start: "top 5%", // Empieza cuando el top de la sección alcanza el top de la ventana
       end: "bottom 100%", // Termina cuando el bottom de la sección sale del top de la ventana
       onEnter: () => {
-        // Cambia el color cuando entra en vista
+        // Cambia el color suavemente cuando entra en vista
         const elements = document.querySelectorAll(".darken");
-        elements.forEach(element => {
-          element.style.color = "var(--dark-color)";
+        elements.forEach((element) => {
+          gsap.to(element, {
+            color: "var(--dark-color)", // Color de destino
+            duration: 0.5, // Duración de la animación
+            ease: "power2.out", // Easing para la animación
+          });
         });
       },
       onLeaveBack: () => {
-        // Restablece el color cuando sale de la vista
+        // Restablece el color suavemente cuando sale de la vista
         const elements = document.querySelectorAll(".darken");
-        elements.forEach(element => {
-          element.style.color = "";
+        elements.forEach((element) => {
+          gsap.to(element, {
+            color: "", // Color por defecto
+            duration: 0.5, // Duración de la animación
+            ease: "power2.out", // Easing para la animación
+          });
         });
       },
     });
@@ -47,14 +58,26 @@ export default function Header() {
   return (
     <nav className="navbar">
       <ul>
-        <li className="white-type nav-element darken">Hummana</li>
+        <li className="white-type nav-element darken">
+          <a className="darken" href="/">
+            Hummana
+          </a>
+        </li>
         <li className="white-type nav-element center">
           <div className="inner-pages-wrapper">
-            <a className="darken">Retreats</a>
-            <a className="darken">Mentorships</a>
+            <a className="darken" href="/retreats">
+              Retreats
+            </a>
+            <a className="darken" href="/mentorships">
+              Mentorships
+            </a>
           </div>
         </li>
-        <li className="white-type nav-element darken">About</li>
+        <li className="white-type nav-element darken">
+          <a className="darken" href="/about">
+            About
+          </a>
+        </li>
       </ul>
     </nav>
   );
