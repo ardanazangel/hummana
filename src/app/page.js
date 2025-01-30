@@ -3,10 +3,6 @@ import Hero from "./components/Hero";
 import MentorshipsRetreats from "./components/MentorshipsRetreats";
 import Values from "./components/Values";
 
-export const metadata = {
-  title: "HUMMANA - Home",
-  description: "The official Next.js Course Dashboard, built with App Router.",
-};
 
 export default function Home() {
   return (

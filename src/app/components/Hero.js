@@ -48,6 +48,8 @@ export default function Hero() {
       },
     });
 
+    gsap.set('.scroller-wrapper',{opacity:0})
+
     scrollerAppearTl.fromTo(
       ".scroller-wrapper",
       {

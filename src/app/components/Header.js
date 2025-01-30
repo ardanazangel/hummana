@@ -1,9 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import "./Header.css";
 
 export default function Header() {
@@ -11,47 +8,26 @@ export default function Header() {
     // Asegúrate de que estamos en el cliente
     if (typeof window === "undefined") return;
 
-    // Registramos el plugin ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Verificar si la sección con la clase .light-section existe
     const lightSection = document.querySelector(".light-section");
+    const elements = document.querySelectorAll(".darken");
 
-    // Si no existe, no configuramos ScrollTrigger
     if (!lightSection) return;
 
-    // Configuramos ScrollTrigger para detectar el scroll sobre .light-section
-    ScrollTrigger.create({
-      trigger: ".light-section", // Sección que debe activar el cambio
-      start: "top 5%", // Empieza cuando el top de la sección alcanza el top de la ventana
-      end: "bottom 100%", // Termina cuando el bottom de la sección sale del top de la ventana
-      onEnter: () => {
-        // Cambia el color suavemente cuando entra en vista
-        const elements = document.querySelectorAll(".darken");
-        elements.forEach((element) => {
-          gsap.to(element, {
-            color: "var(--dark-color)", // Color de destino
-            duration: 0.5, // Duración de la animación
-            ease: "power2.out", // Easing para la animación
-          });
-        });
-      },
-      onLeaveBack: () => {
-        // Restablece el color suavemente cuando sale de la vista
-        const elements = document.querySelectorAll(".darken");
-        elements.forEach((element) => {
-          gsap.to(element, {
-            color: "", // Color por defecto
-            duration: 0.5, // Duración de la animación
-            ease: "power2.out", // Easing para la animación
-          });
-        });
-      },
-    });
+    const handleScroll = () => {
+      const rect = lightSection.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight * 0.1 && rect.bottom > 0;
 
-    // Limpiar el ScrollTrigger al desmontar el componente
+      elements.forEach((element) => {
+        element.style.transition = "color 0.5s ease-in-out";
+        element.style.color = isVisible ? "var(--dark-color)" : "";
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
     return () => {
-      ScrollTrigger.kill();
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

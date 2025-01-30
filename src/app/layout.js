@@ -3,7 +3,7 @@ import Header from "@/app/components/Header";
 import Footer from "./components/Footer";
 
 export const metadata = {
-  title: "HUMMANA",
+  title: "Hummana",
   description: "The official Next.js Course Dashboard, built with App Router.",
 };
 

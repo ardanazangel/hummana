@@ -68,16 +68,16 @@ video{
 h1{
   font-family: 'Andale';
   font-weight: 400;
-  font-size: 2rem;
-  letter-spacing: -0.1vw;
+  letter-spacing: clamp(-0.15rem, -0.065vw + -0.125rem, -0.25rem);
   text-transform: uppercase;
+  font-size: clamp(2.25rem, 0.98vw + 1.868rem, 3.75rem);
 }
 
 .hero-content-text{
   width:100%; 
   display:flex; 
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 0.327vw + 0.873rem, 1.5rem);
   font-weight: 100;
 }
 
@@ -90,15 +90,17 @@ h1{
 h2{
   font-family: 'Andale';
   font-weight: 400;
-  font-size: 2rem;
-  letter-spacing: -0.15rem;
+  font-size: clamp(2rem, 0.654vw + 1.745rem, 3rem);
+  line-height: 1.1em;
+  letter-spacing: clamp(-0.15rem, -0.065vw + -0.125rem, -0.25rem);
   text-transform: uppercase;
 }
 
 p{
   font-family: 'Andale';
   font-weight: 400;
-  font-size:0.875rem;
+  font-size:clamp(0.875rem, 0.082vw + 0.843rem, 1rem);
+  color: var(--dark-color);
 }
 
 .primary-button{
@@ -114,6 +116,10 @@ p{
 
 .white-type{
   color: var(--light-color);
+}
+
+.black-type{
+  color: var(--dark-color);
 }
 
 .hero-title{
@@ -152,7 +158,7 @@ p{
 
 
 .hero-banner-list{
-  padding: 2rem;
+  padding: clamp(1rem, 0.49vw + 1.059rem, 2rem);
 }
 
 .banner-center{
@@ -186,13 +192,13 @@ p{
 .message-content{
   font-family: 'Andale';
   font-weight: 400;
-  font-size: 3rem;
+  font-size: clamp(2rem, 0.654vw + 1.745rem, 3rem);
   letter-spacing: -0.25rem;
   position: absolute;
   max-width: 40%;
   opacity: 1;
   text-transform: uppercase;
-  line-height: 0.9em;
+  line-height: 1.1em;
   opacity: 1;
 }
 
@@ -308,4 +314,27 @@ p{
   align-items: center;
   justify-content: center;
   z-index: 1;
+}
+
+.value-msg-tracker{
+  height: 50vh;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.value-msg-wrapper{
+  grid-column: 2/3;
+  height: 100%;
+  position: relative;
+}
+
+.value-msg-item{
+  position: absolute;
+  text-align: center;
+  top: 70%;
+  opacity: 0;
 }
