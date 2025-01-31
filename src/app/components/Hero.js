@@ -14,16 +14,16 @@ export default function Hero() {
     // Crear la timeline
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".hero-section",
+        trigger: "#hero-section",
         scrub: true,
-        start: "top 0%",
-        end: "bottom 100%",
+        start: "2% 0%",
+        end: "bottom bottom",
       },
     });
 
     const scrollerTl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".hero-section",
+        trigger: "#hero-section",
         scrub: true,
         start: "top 0%",
         end: "bottom 100%",
@@ -32,7 +32,7 @@ export default function Hero() {
 
     const scrollerAppearTl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".hero-section",
+        trigger: "#hero-section",
         scrub: true,
         start: "top top", // Inicia cuando la parte superior de .hero-section alcanza la parte superior del viewport
         end: "15% 0%", // Termina cuando el scroll avanza el equivalente a 100vh
@@ -41,14 +41,12 @@ export default function Hero() {
 
     const scrollerDisappearTl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".hero-section",
+        trigger: "#hero-section",
         scrub: true,
         start: "75% 20%", // Inicia cuando la parte superior de .hero-section alcanza la parte superior del viewport
         end: "95% 75%", // Termina cuando el scroll avanza el equivalente a 100vh
       },
     });
-
-    gsap.set('.scroller-wrapper',{opacity:0})
 
     scrollerAppearTl.fromTo(
       ".scroller-wrapper",
@@ -154,102 +152,103 @@ export default function Hero() {
       opacity: 0,
     });
 
-    gsap.to("video", {
-      filter: "brightness(.2)",
-      scrollTrigger: {
-        trigger: ".mentorships-retreats-section",
-        scrub: true,
-        end: "top 0%",
-      },
-    });
-
-    gsap.to(".hero-banner-wrapper", {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: ".mentorships-retreats-section",
-        scrub: true,
-        start: "-80% 50%",
-        end: "top 100%",
-      },
-    });
   }, []);
 
   return (
     <section id="hero-section">
-      <div className="video-wrapper" style={{ background: "#333" }}>
-        <video autoPlay loop muted playsInline>
-          <source src="/videos/videomar.mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div className="hero-section ">
-        <div className="hero-banner-wrapper">
-          <ul className="hero-banner-list">
-            <li className="nav-element white-type">Laura Vela</li>
-            <li className="nav-element white-type banner-center">(Scroll)</li>
-            <li className="nav-element white-type">
-              <BaliClock />,<span> </span>
-              Bali, Indonesia
-            </li>
-          </ul>
+      <div className="hero-section-tracker">
+        <div
+          className="video-wrapper"
+          style={{
+            zIndex: "-1",
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            overflow: "hidden",
+          }}
+        >
+          <video
+            src="/videos/videomar.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
         </div>
+        <div className="hero-section ">
+          <div className="hero-banner-wrapper">
+            <ul className="hero-banner-list">
+              <li className="nav-element white-type">Laura Vela</li>
+              <li className="nav-element white-type banner-center">(Scroll)</li>
+              <li className="nav-element white-type">
+                <BaliClock />,<span> </span>
+                Bali, Indonesia
+              </li>
+            </ul>
+          </div>
 
-        <div className="scroller-wrapper">
-          <div className="scroller-tracker-wrapper">
-            <div className="scroller-tracker">
-              <div className="spacer"></div>
-              <div className="scroller-opacity"></div>
-              <div className="scroller"></div>
+          <div className="scroller-wrapper">
+            <div className="scroller-tracker-wrapper">
+              <div className="scroller-tracker">
+                <div className="spacer"></div>
+                <div className="scroller-opacity"></div>
+                <div className="scroller"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="hero-wrapper">
-          <div className="hero-content-wrapper">
-            <div className="logo-wrapper">
-              <Logo />
+          <div className="hero-wrapper">
+            <div className="hero-content-wrapper">
+              <div className="logo-wrapper">
+                <Logo />
+              </div>
+              <h1 className="hero-content-text">
+                <div className="line">
+                  <span className="hero-content white-type">Human</span>
+                  <span className="hero-content white-type">And</span>
+                  <span className="hero-content white-type">Nature</span>
+                </div>
+                <div className="line">
+                  <span className="hero-content white-type">Comming</span>
+                  <span className="hero-content white-type">Together</span>
+                </div>
+              </h1>
             </div>
-            <h1 className="hero-content-text">
-              <div className="line">
-                <span className="hero-content white-type">Human</span>
-                <span className="hero-content white-type">And</span>
-                <span className="hero-content white-type">Nature</span>
-              </div>
-              <div className="line">
-                <span className="hero-content white-type">Comming</span>
-                <span className="hero-content white-type">Together</span>
-              </div>
-            </h1>
           </div>
-        </div>
-        <div className="message">
-          <span
-            className="message-content white-type first-message"
-            style={{ opacity: "0" }}
-          >
-            ¿Alguna vez te has planteado estas dos preguntas?
-          </span>
-          <span
-            className="message-content white-type second-message"
-            style={{ opacity: "0" }}
-          >
-            ¿Quién soy?
-            <br />
-            <br />
-            ¿Qué he venido a hacer en esta vida?
-          </span>
-          <span
-            className="message-content white-type third-message"
-            style={{ opacity: "0" }}
-          >
-            Encontrar y aceptar nuestra propia autenticidad, lo que resuena en
-            nuestro interior, es parte de la respuesta.
-          </span>
-          <span
-            className="message-content white-type fourth-message"
-            style={{ opacity: "0" }}
-          >
-            Diseña una vida afín a tu verdadera naturaleza
-          </span>
+          <div className="message">
+            <span
+              className="message-content white-type first-message"
+              style={{ opacity: "0" }}
+            >
+              ¿Alguna vez te has planteado estas dos preguntas?
+            </span>
+            <span
+              className="message-content white-type second-message"
+              style={{ opacity: "0" }}
+            >
+              ¿Quién soy?
+              <br />
+              <br />
+              ¿Qué he venido a hacer en esta vida?
+            </span>
+            <span
+              className="message-content white-type third-message"
+              style={{ opacity: "0" }}
+            >
+              Encontrar y aceptar nuestra propia autenticidad, lo que resuena en
+              nuestro interior, es parte de la respuesta.
+            </span>
+            <span
+              className="message-content white-type fourth-message"
+              style={{ opacity: "0" }}
+            >
+              Diseña una vida afín a tu verdadera naturaleza
+            </span>
+          </div>
         </div>
       </div>
     </section>

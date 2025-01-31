@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Hummana",
-  description: "The official Next.js Course Dashboard, built with App Router.",
+  description: "Retreats & Mentorships from Bali, Indonesia.",
 };
 
 export default function RootLayout({ children }) {
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
-        <Footer />
+        <Footer/>
       </body>
     </html>
   );

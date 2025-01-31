@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation"; // Detecta cambios de página
 import "./Header.css";
+import Link from "next/link";
 
 export default function Header() {
+  const pathname = usePathname(); // Obtiene la URL actual
+
   useEffect(() => {
-    // Asegúrate de que estamos en el cliente
     if (typeof window === "undefined") return;
 
     const lightSection = document.querySelector(".light-section");
@@ -15,7 +18,7 @@ export default function Header() {
 
     const handleScroll = () => {
       const rect = lightSection.getBoundingClientRect();
-      const isVisible = rect.top < window.innerHeight * 0.1 && rect.bottom > 0;
+      const isVisible = rect.top < window.innerHeight * 0.04 && rect.bottom > 0.03;
 
       elements.forEach((element) => {
         element.style.transition = "color 0.5s ease-in-out";
@@ -29,30 +32,30 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <nav className="navbar">
       <ul>
         <li className="white-type nav-element darken">
-          <a className="darken" href="/">
+          <Link className="darken" href="/" scroll={true}>
             Hummana
-          </a>
+          </Link>
         </li>
         <li className="white-type nav-element center">
           <div className="inner-pages-wrapper">
-            <a className="darken" href="/retreats">
+            <Link className="darken" href="/retreats" scroll={true}>
               Retreats
-            </a>
-            <a className="darken" href="/mentorships">
+            </Link>
+            <Link className="darken" href="/mentorships" scroll={true}>
               Mentorships
-            </a>
+            </Link>
           </div>
         </li>
         <li className="white-type nav-element darken">
-          <a className="darken" href="/about">
+          <Link className="darken" href="/about" scroll={true}>
             About
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
