@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import "@/app/components/Footer.css";
 import LogoDark from "@/app/components/LogoDark";
+import Image from "next/image";
 
 export default function Footer() {
   const lenisRef = useRef(null); // Referencia de Lenis
@@ -60,7 +61,12 @@ export default function Footer() {
           </div>
         </div>
         <div className="img">
-          <img src="/images/footer.png" />
+          <Image 
+          src="/images/footer.png"
+          width={1920}
+          height={1080}
+          alt="imagen decorativa de footer"
+          />
         </div>
       </div>
     </section>

@@ -151,7 +151,6 @@ export default function Hero() {
     tl.to(".fourth-message", {
       opacity: 0,
     });
-
   }, []);
 
   return (
@@ -165,20 +164,24 @@ export default function Hero() {
             width: "100%",
             height: "100%",
             overflow: "hidden",
+            
           }}
         >
-          <video
-            src="/videos/videomar.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
+<iframe
+  src="https://player.vimeo.com/video/1052998618?autoplay=1&loop=1&muted=1&background=1"
+  frameborder="0"
+  allow="autoplay; fullscreen"
+  allowfullscreen
+  style={{
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+  }}
+></iframe>
+
+  
         </div>
         <div className="hero-section ">
           <div className="hero-banner-wrapper">

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 
 export default function MentorshipsRetreats() {
   return (
@@ -8,7 +10,12 @@ export default function MentorshipsRetreats() {
             <h2 className="white-type">Mentorships</h2>
           </div>
           <div className="img">
-            <img src="/images/mentorships.png" />
+            <Image 
+            src="/images/mentorships.png" 
+            width={1920}
+            height={2560}
+            alt="mentorships cover selector"
+            />
             <div className="card">
               <p className="">MENTORSHIPS</p>
 
@@ -25,7 +32,12 @@ export default function MentorshipsRetreats() {
             <h2 className="white-type">Retreats</h2>
           </div>
           <div className="img">
-            <img src="/images/retreats.png" />
+            <Image
+            src="/images/retreats.png" 
+            width={1920}
+            height={2560}
+            alt="retreats cover selector"
+            />
             <div className="card">
               <p className="">RETREATS</p>
 

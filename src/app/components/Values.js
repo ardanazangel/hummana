@@ -6,18 +6,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "@/app/components/Values.css";
 
+import Image from "next/image";
+
 export default function Values() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     const msgsTl = gsap.timeline({
-      scrollTrigger:{
-        trigger:'.values-section',
-        scrub:true,
-        start:'top 0%',
-        end: 'bottom 100%',
-      }
-    })
+      scrollTrigger: {
+        trigger: ".values-section",
+        scrub: true,
+        start: "top 0%",
+        end: "bottom 100%",
+      },
+    });
 
     const imageTl = gsap.timeline({
       scrollTrigger: {
@@ -38,44 +40,52 @@ export default function Values() {
     });
 
     msgsTl.fromTo(
-      ".value-msg1",{
-        opacity:1,
-      },{
-        opacity:0,
+      ".value-msg1",
+      {
+        opacity: 1,
+      },
+      {
+        opacity: 0,
       }
-    )
+    );
 
     msgsTl.fromTo(
-      ".value-msg2",{
-        opacity:0,
-      },{
-        opacity:1,
+      ".value-msg2",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
       }
-    )
+    );
 
-    msgsTl.to(".value-msg2",{
-      opacity:0,
-    })
+    msgsTl.to(".value-msg2", {
+      opacity: 0,
+    });
 
     msgsTl.fromTo(
-      ".value-msg3",{
-        opacity:0,
-      },{
-        opacity:1,
+      ".value-msg3",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
       }
-    )
+    );
 
-    msgsTl.to(".value-msg3",{
-      opacity:0,
-    })
+    msgsTl.to(".value-msg3", {
+      opacity: 0,
+    });
 
     msgsTl.fromTo(
-      ".value-msg4",{
-        opacity:0,
-      },{
-        opacity:1,
+      ".value-msg4",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
       }
-    )
+    );
 
     titlesTl.fromTo(
       ".central-titles-tracker",
@@ -116,18 +126,25 @@ export default function Values() {
   return (
     <section className="values-section">
       <div className="section-central-tracker">
-
-      <div className="value-msg-tracker">
-        <div className="value-msg-wrapper">
-          <p className="white-type value-msg-item value-msg1">Pon tu enfoque en el presente, vive aquí y ahora.</p>
-          <p className="white-type value-msg-item value-msg2">Mantén el deseo de evolucionar. Sé curioso ante las adversidades: te están mostrando de qué estás hecho.</p>
-          <p className="white-type value-msg-item value-msg3">Una vez encuentres tu verdad, ten la valentía de defenderla y vivirla.</p>
-          <p className="white-type value-msg-item value-msg4">Sé fiel a quien verdaderamente eres. Cultiva tu autenticidad y tu coherencia internas. </p>
-
-
+        <div className="value-msg-tracker">
+          <div className="value-msg-wrapper">
+            <p className="white-type value-msg-item value-msg1">
+              Pon tu enfoque en el presente, vive aquí y ahora.
+            </p>
+            <p className="white-type value-msg-item value-msg2">
+              Mantén el deseo de evolucionar. Sé curioso ante las adversidades:
+              te están mostrando de qué estás hecho.
+            </p>
+            <p className="white-type value-msg-item value-msg3">
+              Una vez encuentres tu verdad, ten la valentía de defenderla y
+              vivirla.
+            </p>
+            <p className="white-type value-msg-item value-msg4">
+              Sé fiel a quien verdaderamente eres. Cultiva tu autenticidad y tu
+              coherencia internas.{" "}
+            </p>
+          </div>
         </div>
-      </div>
-
 
         <div className="central-titles-wrapper">
           <div className="central-titles-tracker">
@@ -154,41 +171,72 @@ export default function Values() {
         <div className="central-image-wrapper">
           <div className="central-image-tracker">
             <div className="img">
-              <img src="/images/carousel/practice-purpose-1.png" />
+              <Image
+                src="/images/carousel/practice-purpose-1.png"
+                width={1280}
+                height={1920}
+              />
             </div>
             <div className="img">
-              <img src="/images/carousel/bewilling-toevolve-1.png" />
+              <Image
+                src="/images/carousel/bewilling-toevolve-1.png"
+                width={1280}
+                height={1920}
+              />
             </div>
             <div className="img">
-              <img src="/images/carousel/practice-purpose-1.png" />
+              <Image
+                src="/images/carousel/practice-purpose-1.png"
+                width={1280}
+                height={1920}
+              />
             </div>
             <div className="img">
-              <img src="/images/carousel/practice-purpose-1.png" />
+              <Image
+                src="/images/carousel/practice-purpose-1.png"
+                width={1280}
+                height={1920}
+              />
             </div>
           </div>
         </div>
       </div>
 
-
       <div className="background-images">
         <div className="value-wrapper value-1">
           <div className="img">
-            <img src="/images/carousel/practice-purpose-2.png" />
+            <Image
+              src="/images/carousel/practice-purpose-2.png"
+              width={1920}
+              height={1080}
+            />
           </div>
         </div>
         <div className="value-wrapper value-2">
           <div className="img">
-            <img src="/images/carousel/bewilling-toevolve-2.png" />
+            <Image
+              src="/images/carousel/bewilling-toevolve-2.png"
+              width={1920}
+              height={1080}
+            />
           </div>
         </div>
         <div className="value-wrapper value-3">
           <div className="img">
-            <img src="/images/carousel/practice-purpose-2.png" />
+            <Image
+              src="/images/carousel/practice-purpose-2.png"
+              width={1920}
+              height={1080}
+            />
           </div>
         </div>
         <div className="value-wrapper value-4">
           <div className="img">
-            <img src="/images/carousel/practice-purpose-2.png" />
+            <Image
+              src="/images/carousel/practice-purpose-2.png"
+              width={1920}
+              height={1080}
+            />
           </div>
         </div>
       </div>

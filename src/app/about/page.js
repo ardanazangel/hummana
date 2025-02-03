@@ -2,6 +2,7 @@ import MentorshipsRetreats from "../components/MentorshipsRetreats";
 import "@/app/about/about.css";
 import ReadMore from "../components/ReadMore";
 import AboutImage from "../components/AboutImage";
+import Image from "next/image";
 
 export default function About() {
   const secondBlockExtra = `\n\n Ha trabajado con algunas de las empresas líderes del mundo, con directores ejecutivos, médicos, abogados, creativos, celebridades, atletas de alto rendimiento y emprendedores, a través de sus programas de fortalecimiento de mentalidad, meditación y atención plena. Es consultora y mentora de alto rendimiento, oradora motivacional y emprendedora social. Dirige retiros, talleres y cursos de formación en distintas partes del mundo. `;
@@ -12,19 +13,19 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
     <>
       <section className="about-principal about-principal-three-columns">
         <div className="page-title-wrapper">
-        <h1 style={{width:'100%'}}>
-          <div className="line">
-            <span className="hero-content white-type">Un</span>
-            <span className="hero-content white-type">Viaje</span>
-            <span className="hero-content white-type">De</span>
-          </div>
-          <div className="line">
-            <span className="hero-content white-type">Fuera</span>
-            <span className="hero-content white-type">Hacia</span>
-            <span className="hero-content white-type">Dentro</span>
-          </div>
-        </h1>
-        <p className="white-type">Laura Vela</p>
+          <h1 style={{ width: "100%" }}>
+            <div className="line">
+              <span className="hero-content white-type">Un</span>
+              <span className="hero-content white-type">Viaje</span>
+              <span className="hero-content white-type">De</span>
+            </div>
+            <div className="line">
+              <span className="hero-content white-type">Fuera</span>
+              <span className="hero-content white-type">Hacia</span>
+              <span className="hero-content white-type">Dentro</span>
+            </div>
+          </h1>
+          <p className="white-type">Laura Vela</p>
         </div>
       </section>
       <section className="about-content-wrapper light-section">
@@ -90,32 +91,50 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
             </div>
           </div>
           <div className="img">
-            <img src="/images/surf.png" style={{ background: "red" }} />
+            <Image 
+            src="/images/surf.png" 
+            width={1920}
+            height={1080}
+            style={{ background: "red" }} 
+            alt="Laura Vela surfeando"
+            />
           </div>
         </div>
 
         <div className="about-principal-three-columns about-third-block">
           <div className="fill-center-column">
-{/*          <div className="img about-mini-image">
+            {/*          <div className="img about-mini-image">
             <img />
           </div>*/}
-        <div className="title-with-paragraph third-block-content" style={{textAlign:'center'}}>
-          <AboutImage />
+            <div
+              className="title-with-paragraph third-block-content"
+              style={{ textAlign: "center" }}
+            >
+              <AboutImage />
               <h2 className="black-type">
-              crear para creer: el inicio de hummana
+                crear para creer: el inicio de hummana
               </h2>
               <div className="text-block-long">
                 <p className="black-type">
-                Su enfoque se resume en una frase: aquello que crees en tu interior es lo que creas en tu vida. Creer para crear. Es experta en potenciar capacidades humanas, especialmente en momentos de desafío, incertidumbre y cambio. Sus mentorías personalizadas, formaciones, programas y retiros se basan en fortalecer la mente para pasar a la acción.
+                  Su enfoque se resume en una frase: aquello que crees en tu
+                  interior es lo que creas en tu vida. Creer para crear. Es
+                  experta en potenciar capacidades humanas, especialmente en
+                  momentos de desafío, incertidumbre y cambio. Sus mentorías
+                  personalizadas, formaciones, programas y retiros se basan en
+                  fortalecer la mente para pasar a la acción.
                   <br />
                   <br />
-                  Ha creado HUMMANA, un proyecto para reconectar al ser humano (Human) con su fuerza vital (Mana). Tiene la experiencia y el don de guiar a personas para potenciar el rendimiento profesional y el balance personal. Dirige y mentoriza procesos para diseñar una vida afín a la verdadera naturaleza de cada individuo.  
-
+                  Ha creado HUMMANA, un proyecto para reconectar al ser humano
+                  (Human) con su fuerza vital (Mana). Tiene la experiencia y el
+                  don de guiar a personas para potenciar el rendimiento
+                  profesional y el balance personal. Dirige y mentoriza procesos
+                  para diseñar una vida afín a la verdadera naturaleza de cada
+                  individuo.  
                 </p>
                 <ReadMore text={thirdBlockExtra} maxLength={16} />
               </div>
-              </div>
-              </div>
+            </div>
+          </div>
         </div>
       </section>
       <MentorshipsRetreats />
