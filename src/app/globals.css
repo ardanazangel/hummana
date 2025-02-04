@@ -357,12 +357,15 @@ p{
 .value-msg-wrapper{
   grid-column: 2/3;
   height: 100%;
+  width: 50%;
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .value-msg-item{
   position: absolute;
   text-align: center;
-  top: 70%;
+  top: 65%;
   opacity: 0;
 }

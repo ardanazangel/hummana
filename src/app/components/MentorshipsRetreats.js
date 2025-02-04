@@ -11,10 +11,14 @@ export default function MentorshipsRetreats() {
           </div>
           <div className="img">
             <Image 
-            src="/images/mentorships.png" 
+            src="/images/mentorships.webp" 
             width={1920}
             height={2560}
             alt="mentorships cover selector"
+            style={{
+              filter:'brightness(.75)'
+
+            }}
             />
             <div className="card">
               <p className="">MENTORSHIPS</p>
@@ -33,10 +37,13 @@ export default function MentorshipsRetreats() {
           </div>
           <div className="img">
             <Image
-            src="/images/retreats.png" 
+            src="/images/retreats.jpg" 
             width={1920}
             height={2560}
             alt="retreats cover selector"
+            style={{
+              filter:'brightness(.75)'
+            }}
             />
             <div className="card">
               <p className="">RETREATS</p>

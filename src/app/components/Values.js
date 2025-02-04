@@ -186,14 +186,14 @@ export default function Values() {
             </div>
             <div className="img">
               <Image
-                src="/images/carousel/practice-purpose-1.png"
+                src="/images/carousel/find-your-truth-1.png"
                 width={1280}
                 height={1920}
               />
             </div>
             <div className="img">
               <Image
-                src="/images/carousel/practice-purpose-1.png"
+                src="/images/carousel/find-your-truth-2.png"
                 width={1280}
                 height={1920}
               />
@@ -224,7 +224,7 @@ export default function Values() {
         <div className="value-wrapper value-3">
           <div className="img">
             <Image
-              src="/images/carousel/practice-purpose-2.png"
+              src="/images/carousel/find-your-truth-2.png"
               width={1920}
               height={1080}
             />

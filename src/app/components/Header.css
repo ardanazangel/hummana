@@ -1,5 +1,5 @@
 .navbar{
-    padding: clamp(1rem, 0.49vw + 1.059rem, 2rem);
+    padding: clamp(1rem, 0.936rem + 0.261vw, 1.25rem);
     position: fixed;
     top: 0;
     z-index: 9999999999999999999999;
@@ -17,7 +17,7 @@ ul{
     font-weight: 200;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: clamp(1rem, 0.098vw + 0.962rem, 1.15rem);
+    font-size: clamp(0.825rem, 0.78rem + 0.183vw, 1rem);
 }
 
 .center{
