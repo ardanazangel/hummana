@@ -47,8 +47,8 @@ export default function Header() {
             <Link className="darken" href="/retreats" scroll={true}>
               Retreats
             </Link>
-            <Link className="darken" href="/mentorships" scroll={true}>
-              Mentorships
+            <Link className="darken" href="/mentorship" scroll={true}>
+              Mentorship
             </Link>
           </div>
         </li>

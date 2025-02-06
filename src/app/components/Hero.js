@@ -167,25 +167,23 @@ export default function Hero() {
             
           }}
         >
-<iframe
-  src="https://player.vimeo.com/video/1052998618?autoplay=1&loop=1&muted=1&background=1"
-  frameBorder="0"
-  allow="autoplay; fullscreen"
-  allowFullScreen
-  style={{
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100vw',
-    height: '56.25vw',
-    minHeight: '100vh',
-    minWidth: '177.778vh',
-    filter: 'brightness(00.75)',
-  }}
-  title="background video hero"
-></iframe>
-
-  
+        <iframe
+          src="https://player.vimeo.com/video/1052998618?autoplay=1&loop=1&muted=1&background=1"
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '56.25vw',
+            minHeight: '100vh',
+            minWidth: '177.778vh',
+            filter: 'brightness(00.75)',
+          }}
+          title="background video hero"
+        ></iframe>
         </div>
         <div className="hero-section ">
           <div className="hero-banner-wrapper">

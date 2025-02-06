@@ -19,6 +19,7 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
               <span className="hero-content white-type">Viaje</span>
               <span className="hero-content white-type">De</span>
             </div>
+            
             <div className="line">
               <span className="hero-content white-type">Fuera</span>
               <span className="hero-content white-type">Hacia</span>

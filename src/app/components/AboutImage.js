@@ -5,14 +5,20 @@ import { useEffect, useRef } from 'react';
 const images = [
   '/images/about-principal.png',
   '/images/footer.png',
-  '/images/mentorships.png',
-  '/images/retreats.png',
+  '/images/mentorships.webp',
+  '/images/retreats.jpg',
   '/images/surf.png',
   '/images/about-principal.png',
   '/images/footer.png',
-  '/images/mentorships.png',
-  '/images/retreats.png',
+  '/images/mentorships.webp',
+  '/images/retreats.jpg',
   '/images/surf.png',
+  '/images/about-principal.png',
+  '/images/footer.png',
+  '/images/mentorships.webp',
+  '/images/retreats.jpg',
+  '/images/surf.png',
+  
 
 
 ];
