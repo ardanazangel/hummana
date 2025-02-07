@@ -44,8 +44,8 @@ export default function Header() {
         </li>
         <li className="white-type nav-element center">
           <div className="inner-pages-wrapper">
-            <Link className="darken" href="/retreats" scroll={true}>
-              Retreats
+            <Link className="darken" href="/retreat" scroll={true}>
+              Retreat
             </Link>
             <Link className="darken" href="/mentorship" scroll={true}>
               Mentorship

@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Logo from "./Logo";
 import BaliClock from "./RelojBali";
+import { Linear } from "gsap";
 
 export default function Hero() {
   useEffect(() => {
@@ -75,6 +76,8 @@ export default function Hero() {
       },
       {
         height: "100%",
+        ease:'linear',
+
       }
     );
 

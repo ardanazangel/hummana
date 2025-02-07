@@ -36,12 +36,11 @@ h1{
 
 h3{
     display: flex;
-    width: 100%;
 
 }
 
 .secondary-button{
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 
@@ -78,7 +77,7 @@ h3{
 .steps-texto{
     width: 50vw;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     height: 50%;
 
 }
@@ -93,6 +92,7 @@ h3{
     align-items: center;
     justify-content: center;
     padding: 0 25vw;
+    pointer-events: none;
   }
   
   .linea {
@@ -106,7 +106,7 @@ h3{
     display: flex;
     flex-direction: column;
     gap: .75rem;
-    grid-column: 2 / 3;
+    grid-column: 2 / 5;
     align-items: center;
     justify-content: end;
     /* padding-top: 15vh; */

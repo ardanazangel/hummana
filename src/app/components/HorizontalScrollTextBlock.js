@@ -26,9 +26,9 @@ export default function HorizontalScrollTextBlock({
             }}
           >
             <Image
-              width={2560}
-              height={1920}
-              alt="meditation image"
+              width={1920}
+              height={2560}
+              alt="eight steps photos"
               src={source}
             />
           </div>

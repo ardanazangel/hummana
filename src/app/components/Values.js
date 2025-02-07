@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Linear } from "gsap";
 
 import "@/app/components/Values.css";
 
@@ -112,15 +113,22 @@ export default function Values() {
       },
       {
         y: "-25%",
+                ease:'linear',
+
       }
     );
 
     imageTl.to(".central-image-tracker", {
       y: "-50%",
+      ease:'linear',
+
+
     });
 
     imageTl.to(".central-image-tracker", {
       y: "-75%",
+      ease:'linear',
+
     });
   }, []);
   return (

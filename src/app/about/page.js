@@ -26,7 +26,7 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
               <span className="hero-content white-type">Dentro</span>
             </div>
           </h1>
-          <p className="white-type">Laura Vela</p>
+          <h4 className="white-type">Laura Vela</h4>
         </div>
       </section>
       <section className="about-content-wrapper light-section">

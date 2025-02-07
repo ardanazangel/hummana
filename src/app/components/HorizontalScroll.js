@@ -2,8 +2,8 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import HorizontalScrollTextBlock from "./HorizontalScrollTextBlock";
+import { Linear } from "gsap";
 
 export default function HorizontalScroll() {
   const containerRef = useRef(null);
@@ -26,30 +26,34 @@ export default function HorizontalScroll() {
           x: 0,
         },
         {
-          x: `-${scrollDistance}px`, // Se mueve la cantidad exacta necesaria
+          x: '-300vw', // Se mueve la cantidad exacta necesaria
+          ease:'linear',
           scrollTrigger: {
             trigger: container,
-            start: "top top",
+            start: "top 0%",
             end: "bottom bottom", // El end dinámico basado en la distancia
             scrub: true,
           },
         }
-        
       );
-      gsap.fromTo('.linea',{
-        scaleX: 0.,
 
-      },{
-        scaleX: 1,
-        duration:10,
-        scrollTrigger:{
-          trigger:'.horizontal-scroll',
-          start: '6.25% top',
-          end:'bottom 50%',
-          scrub:true,
-
+      gsap.fromTo(
+        ".linea",
+        {
+          scaleX: 0,
+        },
+        {
+          scaleX: 1,
+          duration: 10,
+          ease:'linear',
+          scrollTrigger: {
+            trigger: ".horizontal-scroll",
+            start: "top 75%",
+            end: "bottom bottom",
+            scrub: true,
+          },
         }
-      })
+      );
     }
   }, []);
 
@@ -57,9 +61,9 @@ export default function HorizontalScroll() {
     <section ref={containerRef} className="horizontal-scroll">
       <div className="horizontal-scroll-tracker">
         <div ref={contentRef} className="horizontal-scroll-content">
-
+          {/* 
           <div className="steps banner-principal">
-            <div className="the-method-principal-info-wrapper">
+           <div className="the-method-principal-info-wrapper">
               <div className="horizontal-banner-content">
                 <h2 className="white-type center-type">The Method</h2>
                 <h3 className="white-type center-type">8 Steps to Welness</h3>
@@ -86,84 +90,85 @@ export default function HorizontalScroll() {
               />
             </div>
           </div>
+            */}
+
 
           <div
-          style={{display:'flex', position:'relative'}}
-           className="horizontal-scrolltracker-container">
-          <div className="horizontal-scrolltracker-wrapper">
-            <div className="linea"></div>
+            style={{ display: "flex", position: "relative" }}
+            className="horizontal-scrolltracker-container"
+          >
+            <div className="horizontal-scrolltracker-wrapper">
+              <div className="linea"></div>
+            </div>
+
+            <HorizontalScrollTextBlock
+              number={"1"}
+              title={"Breathwork"}
+              subtitle={
+                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+              }
+              source={"/images/mentorship/breathwork.png"}
+            />
+
+            <HorizontalScrollTextBlock
+              number={"1"}
+              title={"Breathwork"}
+              subtitle={
+                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+              }
+              source={"/images/mentorship/meditation.png"}
+            />
+            <HorizontalScrollTextBlock
+              number={"1"}
+              title={"Breathwork"}
+              subtitle={
+                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+              }
+              source={"/images/mentorship/movement.png"}
+            />
+            <HorizontalScrollTextBlock
+              number={"1"}
+              title={"Breathwork"}
+              subtitle={
+                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+              }
+              source={"/images/mentorship/self-knowledge.png"}
+            />
+            <HorizontalScrollTextBlock
+              number={"1"}
+              title={"Breathwork"}
+              subtitle={
+                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+              }
+              source={"/images/mentorship/self-talk.png"}
+            />
+            <HorizontalScrollTextBlock
+              number={"1"}
+              title={"Breathwork"}
+              subtitle={
+                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+              }
+              source={"/images/mentorship/meditate.png"}
+            />
+            <HorizontalScrollTextBlock
+              number={"1"}
+              title={"Breathwork"}
+              subtitle={
+                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+              }
+              source={"/images/mentorship/meditate.png"}
+            />
+            <HorizontalScrollTextBlock
+              number={"1"}
+              title={"Breathwork"}
+              subtitle={
+                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+              }
+              source={"/images/mentorship/meditate.png"}
+            />
           </div>
-
-          <HorizontalScrollTextBlock
-            number={"1"}
-            title={"Breathwork"}
-            subtitle={
-              "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
-            }
-            source={"/images/mentorship/meditate.png"}
-          />
-
-          <HorizontalScrollTextBlock
-            number={"1"}
-            title={"Breathwork"}
-            subtitle={
-              "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
-            }
-            source={"/images/mentorship/meditate.png"}
-          />
-          <HorizontalScrollTextBlock
-            number={"1"}
-            title={"Breathwork"}
-            subtitle={
-              "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
-            }
-            source={"/images/mentorship/meditate.png"}
-          />
-          <HorizontalScrollTextBlock
-            number={"1"}
-            title={"Breathwork"}
-            subtitle={
-              "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
-            }
-            source={"/images/mentorship/meditate.png"}
-          />
-          <HorizontalScrollTextBlock
-            number={"1"}
-            title={"Breathwork"}
-            subtitle={
-              "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
-            }
-            source={"/images/mentorship/meditate.png"}
-          />
-          <HorizontalScrollTextBlock
-            number={"1"}
-            title={"Breathwork"}
-            subtitle={
-              "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
-            }
-            source={"/images/mentorship/meditate.png"}
-          />
-          <HorizontalScrollTextBlock
-            number={"1"}
-            title={"Breathwork"}
-            subtitle={
-              "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
-            }
-            source={"/images/mentorship/meditate.png"}
-          />
-          <HorizontalScrollTextBlock
-            number={"1"}
-            title={"Breathwork"}
-            subtitle={
-              "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
-            }
-            source={"/images/mentorship/meditate.png"}
-          />
         </div>
       </div>
-      </div>
-
-
     </section>
   );
 }
