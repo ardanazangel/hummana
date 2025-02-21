@@ -1,6 +1,6 @@
 "use client";
 
-import "@/app/products.css";
+import "../products.css";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -10,7 +10,9 @@ import PrimaryButton from "./buttons/SecondaryButton";
 export default function BannerProducts({
   bannerImage,
   bannerLink,
+  bannerLink2,
   bannerLinkLabel,
+  bannerLinkLabel2,
   title,
   titleDescription,
   subtitleLine1,
@@ -27,7 +29,8 @@ export default function BannerProducts({
         y: "0%",
       },
       {
-        y: "30%",
+        y: "40%",
+        ease:'linear',
         scrollTrigger: {
           trigger: ".principal-banner-products",
           scrub: "true",
@@ -58,11 +61,10 @@ export default function BannerProducts({
             zIndex: "-1",
             transformOrigen: "center",
           }}
-          loading="eager"
           className="banner-image"
         />
       </div>
-      <div className="first-content">
+      <div className="first-content contenido-servicios">
         <div className="first-content-container">
           <h1>
             <div className="line">
@@ -89,10 +91,15 @@ export default function BannerProducts({
           />
         </div>
       </div>
-      <div className="first-content">
+      <div className="first-content contenido-servicios">
         <div className="first-content-container">
           <h2 className="white-type center-type">{secondTitle}</h2>
           <h4 className="white-type center-type">{secondDescription}</h4>
+          <PrimaryButton
+            href={bannerLink2}
+            label={bannerLinkLabel2}
+            style={{ color: "white" }}
+          />
         </div>
       </div>
     </section>

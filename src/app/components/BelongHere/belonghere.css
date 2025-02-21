@@ -1,0 +1,21 @@
+.youbelonghere-section {
+    min-height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    
+}
+
+.youbelonghere-title{
+    width: calc(100vw / 1.5);
+}
+
+.youbelonghere-description{
+    width: calc(100vw / 3);
+}

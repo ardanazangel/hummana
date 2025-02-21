@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef } from "react";
 import HorizontalScrollTextBlock from "./HorizontalScrollTextBlock";
-import { Linear } from "gsap";
+import Image from "next/image";
 
 export default function HorizontalScroll() {
   const containerRef = useRef(null);
@@ -15,100 +15,171 @@ export default function HorizontalScroll() {
     const container = containerRef.current;
     const content = contentRef.current;
 
-    if (container && content) {
-      const contentWidth = content.scrollWidth; // Ancho total del contenido
-      const viewportWidth = container.clientWidth; // Ancho de la pantalla
-      const scrollDistance = contentWidth - viewportWidth; // Distancia total a desplazar
-
-      gsap.fromTo(
-        content,
-        {
-          x: 0,
+    gsap.fromTo(
+      content,
+      { x: 0 },
+      {
+        x: () => `-${content.scrollWidth - window.innerWidth}px`, // Calcula el desplazamiento dinámico
+        ease: "none", // Transición más suave
+        scrollTrigger: {
+          trigger: container,
+          start: "top top",
+          end: "bottom bottom", // Ajusta el end dinámicamente
+          scrub: true,
         },
-        {
-          x: '-300vw', // Se mueve la cantidad exacta necesaria
-          ease:'linear',
-          scrollTrigger: {
-            trigger: container,
-            start: "top 0%",
-            end: "bottom bottom", // El end dinámico basado en la distancia
-            scrub: true,
-          },
-        }
-      );
+      }
+    );
 
-      gsap.fromTo(
-        ".linea",
-        {
-          scaleX: 0,
-        },
-        {
-          scaleX: 1,
-          duration: 10,
-          ease:'linear',
-          scrollTrigger: {
-            trigger: ".horizontal-scroll",
-            start: "top 75%",
-            end: "bottom bottom",
-            scrub: true,
-          },
-        }
-      );
-    }
+    const lineaTl = gsap.timeline({
+      ease: "none",
+      scrollTrigger: {
+        // Debe estar aquí dentro
+        trigger: container,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    });
+
+    const imagesTl = gsap.timeline({
+      ease: "none",
+      scrollTrigger: {
+        // Debe estar aquí dentro
+        trigger: container,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    });
+
+    lineaTl.fromTo(
+      ".linea-1",
+      { scaleX: 0, transformOrigin: "left center" }, // Ajustamos el origen para que crezca desde la izquierda
+      { scaleX: 1 }
+    );
+
+    lineaTl.fromTo(
+      ".linea-2",
+      { scaleX: 0, transformOrigin: "left center" }, // Ajustamos el origen para que crezca desde la izquierda
+      { scaleX: 1 }
+    );
+    lineaTl.fromTo(
+      ".linea-3",
+      { scaleX: 0, transformOrigin: "left center" }, // Ajustamos el origen para que crezca desde la izquierda
+      { scaleX: 1 }
+    );
+    lineaTl.fromTo(
+      ".linea-4",
+      { scaleX: 0, transformOrigin: "left center" }, // Ajustamos el origen para que crezca desde la izquierda
+      { scaleX: 1 }
+    );
+    lineaTl.fromTo(
+      ".linea-5",
+      { scaleX: 0, transformOrigin: "left center" }, // Ajustamos el origen para que crezca desde la izquierda
+      { scaleX: 1 }
+    );
+    lineaTl.fromTo(
+      ".linea-6",
+      { scaleX: 0, transformOrigin: "left center" }, // Ajustamos el origen para que crezca desde la izquierda
+      { scaleX: 1 }
+    );
+    lineaTl.fromTo(
+      ".linea-7",
+      { scaleX: 0, transformOrigin: "left center" }, // Ajustamos el origen para que crezca desde la izquierda
+      { scaleX: 1 }
+    );
+
+    imagesTl.fromTo(".image-1", { opacity: 1 }, { opacity: 0, });
+    imagesTl.fromTo(".image-2", { opacity: 1 }, { opacity: 0 });
+    imagesTl.fromTo(".image-3", { opacity: 1 }, { opacity: 0 });
+    imagesTl.fromTo(".image-4", { opacity: 1 }, { opacity: 0 });
+    imagesTl.fromTo(".image-5", { opacity: 1 }, { opacity: 0 });
+    imagesTl.fromTo(".image-6", { opacity: 1 }, { opacity: 0 });
+    imagesTl.fromTo(".image-7", { opacity: 1 }, { opacity: 0 });
   }, []);
 
   return (
     <section ref={containerRef} className="horizontal-scroll">
+      <div className="image-fixed-wrapper" style={{filter:'brightness(.7)'}}>
+        <Image
+          src="/images/mentorship/eight-steps/01.png"
+          width={1280}
+          height={1920}
+          style={{ position: "absolute", zIndex: "-1" }}
+          className="horizontal-scroll-images image-1"
+          alt='breathwork background image'
+        />
+        <Image
+          src="/images/mentorship/eight-steps/02.png"
+          width={1280}
+          height={1920}
+          style={{ position: "absolute", zIndex: "-2" }}
+          className="horizontal-scroll-images image-2"
+          alt='meditation background image'
+
+        />
+        <Image
+          src="/images/mentorship/eight-steps/03.png"
+          width={1280}
+          height={1920}
+          style={{ position: "absolute", zIndex: "-3" }}
+          className="horizontal-scroll-images image-3"
+          alt='movement background image'
+
+        />
+        <Image
+          src="/images/mentorship/eight-steps/04.png"
+          width={1280}
+          height={1920}
+          style={{ position: "absolute", zIndex: "-4" }}
+          className="horizontal-scroll-images image-4"
+          alt='mindset background image'
+
+        />
+        <Image
+          src="/images/mentorship/eight-steps/05.png"
+          width={1280}
+          height={1920}
+          style={{ position: "absolute", zIndex: "-5" }}
+          className="horizontal-scroll-images image-5"
+          alt='self-knowledge background image'
+
+        />
+        <Image
+          src="/images/mentorship/eight-steps/06.png"
+          width={1280}
+          height={1920}
+          style={{ position: "absolute", zIndex: "-6" }}
+          className="horizontal-scroll-images image-6"
+          alt='self-talk background image'
+
+        />
+        <Image
+          src="/images/mentorship/eight-steps/07.png"
+          width={1280}
+          height={1920}
+          style={{ position: "absolute", zIndex: "-7" }}
+          className="horizontal-scroll-images image-7"
+          alt='mindfulness background image'
+
+        />
+        <Image
+          src="/images/mentorship/eight-steps/08.png"
+          width={1280}
+          height={1920}
+          style={{ position: "absolute", zIndex: "-8" }}
+          className="horizontal-scroll-images image-8"
+          alt='the creative plan background image'
+
+        />
+      </div>
       <div className="horizontal-scroll-tracker">
         <div ref={contentRef} className="horizontal-scroll-content">
-          {/* 
-          <div className="steps banner-principal">
-           <div className="the-method-principal-info-wrapper">
-              <div className="horizontal-banner-content">
-                <h2 className="white-type center-type">The Method</h2>
-                <h3 className="white-type center-type">8 Steps to Welness</h3>
-                <p className="white-type center-type">
-                  Con HUMMANA the method aprenderás un método que te permitirá
-                  conocer, en ocho pasos, cómo afrontar cualquier situación de
-                  manera asertiva.  <br /> Esta metodología integral materializa
-                  la esencia de HUMMANA mentorships.
-                </p>
-              </div>
-            </div>
-
-            <div className="img">
-              <Image
-                width={2560}
-                height={1920}
-                alt="method banner imagen"
-                src="/images/mentorship/banner-themethod.png"
-                style={{
-                  zIndex: "-1",
-                  position: "absolute",
-                  filter: "brightness(.85)",
-                }}
-              />
-            </div>
-          </div>
-            */}
-
-
           <div
             style={{ display: "flex", position: "relative" }}
             className="horizontal-scrolltracker-container"
           >
-            <div className="horizontal-scrolltracker-wrapper">
-              <div className="linea"></div>
-            </div>
-
-            <HorizontalScrollTextBlock
-              number={"1"}
-              title={"Breathwork"}
-              subtitle={
-                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
-              }
-              source={"/images/mentorship/breathwork.png"}
-            />
+            <HorizontalScrollTextBlock />
 
             <HorizontalScrollTextBlock
               number={"1"}
@@ -118,54 +189,84 @@ export default function HorizontalScroll() {
               }
               source={"/images/mentorship/meditation.png"}
             />
+            <div className="horizontal-scrolltracker-wrapper">
+              <div className="linea linea-1"></div>
+            </div>
             <HorizontalScrollTextBlock
-              number={"1"}
-              title={"Breathwork"}
+              number={"2"}
+              title={"Meditation"}
               subtitle={
-                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+                "MEDITAR ES MIRAR NUESTRO INTERIOR PARA DARLE LUGAR Y ESPACIO A LO QUE LATE EN NOSOTROS."
               }
               source={"/images/mentorship/movement.png"}
             />
+            <div className="horizontal-scrolltracker-wrapper">
+              <div className="linea linea-2"></div>
+            </div>
             <HorizontalScrollTextBlock
-              number={"1"}
-              title={"Breathwork"}
+              number={"3"}
+              title={"Movement"}
               subtitle={
-                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+                "EL MOVIMIENTO ES FUNDAMENTAL PARA TU SALUD, TU LONGEVIDAD Y TU CALIDAD DE VIDA."
               }
               source={"/images/mentorship/self-knowledge.png"}
             />
+            <div className="horizontal-scrolltracker-wrapper">
+              <div className="linea linea-3"></div>
+            </div>
             <HorizontalScrollTextBlock
-              number={"1"}
-              title={"Breathwork"}
+              number={"4"}
+              title={"Mindset"}
               subtitle={
-                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+                "EL CAMBIO COMIENZA CUANDO LA RESPUESTA ANTE LO QUE NOS SUCEDE SE BASA EN UNA VERSIÓN ACTUALIZADA DE NOSOTROS MISMOS."
               }
               source={"/images/mentorship/self-talk.png"}
             />
+            <div className="horizontal-scrolltracker-wrapper">
+              <div className="linea linea-4"></div>
+            </div>
             <HorizontalScrollTextBlock
-              number={"1"}
-              title={"Breathwork"}
+              number={"5"}
+              title={"Self-Knowledge"}
               subtitle={
-                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+                "SI NO VIVIMOS SINTONIZADOS CON NUESTRA ESENCIA, TODO LO DEMÁS SE DESEQUILIBRA."
               }
               source={"/images/mentorship/meditate.png"}
             />
+            <div className="horizontal-scrolltracker-wrapper">
+              <div className="linea linea-5"></div>
+            </div>
             <HorizontalScrollTextBlock
-              number={"1"}
-              title={"Breathwork"}
+              number={"6"}
+              title={"Self-talk"}
               subtitle={
-                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+                "TENEMOS ENTRE 60 MIL Y 70 MIL PENSAMIENTOS AL DÍA, EL 80% SON NEGATIVOS."
               }
               source={"/images/mentorship/meditate.png"}
             />
+            <div className="horizontal-scrolltracker-wrapper">
+              <div className="linea linea-6"></div>
+            </div>
             <HorizontalScrollTextBlock
-              number={"1"}
-              title={"Breathwork"}
+              number={"7"}
+              title={"Mindfulness"}
               subtitle={
-                "RESPIRAMOS 20 MIL VECES AL DÍA Y LA FORMA EN QUE LO HACEMOS AFECTA NUESTRO SISTEMA NERVIOSO E INMUNOLÓGICO."
+                "PODEMOS ENTRENAR NUESTRO CEREBRO PARA CAMBIAR REACCIONES IMPULSIVAS POR RESPUESTAS ADECUADAS."
               }
               source={"/images/mentorship/meditate.png"}
             />
+            <div className="horizontal-scrolltracker-wrapper">
+              <div className="linea linea-7"></div>
+            </div>
+            <HorizontalScrollTextBlock
+              number={"8"}
+              title={"The Creative Plan"}
+              subtitle={
+                "AL PONERLE FECHA A UN PROYECTO, SE CONVIERTE EN UNA META. UNA META, DIVIDIDA EN PASOS, SE CONVIERTE EN UN PLAN. Y UN PLAN, RESPALDADO POR ACCIONES, SE CONVIERTE EN UNA REALIDAD."
+              }
+              source={"/images/mentorship/meditate.png"}
+            />
+            <HorizontalScrollTextBlock />
           </div>
         </div>
       </div>

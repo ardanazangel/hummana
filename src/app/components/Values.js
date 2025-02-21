@@ -3,9 +3,8 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Linear } from "gsap";
 
-import "@/app/components/Values.css";
+import "../components/Values.css";
 
 import Image from "next/image";
 

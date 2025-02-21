@@ -24,5 +24,5 @@ export default function BaliClock() {
     return () => clearInterval(interval); // Limpiar intervalo al desmontar
   }, []);
 
-  return <span>{time}</span>;
+  return <span>{time},</span>;
 }

@@ -1,0 +1,32 @@
+.thevalue-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.thevalue-section > .img{
+    width: 100%;
+}
+
+.value-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.value-content-text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100%/2);
+}
+
+.value-letra-pequeña{
+    position: absolute;
+    bottom: 2vw;
+    width: calc(100%/1.5);
+}

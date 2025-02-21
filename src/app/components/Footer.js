@@ -2,15 +2,18 @@
 
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
-import "@/app/components/Footer.css";
-import LogoDark from "@/app/components/LogoDark";
+{/*import "@/src/app/components/Footer.css";*/}
+import LogoDark from "../components/LogoDark";
 import Image from "next/image";
+import '../components/Footer.css'
+import Link from "next/link";
 
 export default function Footer() {
   const lenisRef = useRef(null); // Referencia de Lenis
 
   useEffect(() => {
     // Inicializa Lenis (scroll suave)
+
     const lenis = new Lenis({
       duration: 2.5,
       smooth: true,
@@ -18,6 +21,7 @@ export default function Footer() {
       smoothTouch: true,
       touchMultiplier: 0.5,
     });
+    
 
     lenisRef.current = lenis;
 
@@ -42,31 +46,24 @@ export default function Footer() {
               <LogoDark />
             </div>
             <div className="footer-contacto">
-              <div className="footer-tag">Contacto</div>
               <ul className="footer-list">
                 <li className="footer-contact-item u-text-style-">
-                  Bali, Indonesia
+                <Link href={'#'}><p>Bali, Indonesia</p></Link>
+
                 </li>
                 <li className="footer-contact-item u-text-style-">
-                  +51 965 292 537
+                  <Link href={'#'}><p>+51 965 292 537</p></Link>
+
                 </li>
                 <li className="footer-contact-item u-text-style-">
-                  hello@lauravelaflorensa.com
+                  <Link href={'#'}><p>hello@lauravelaflorensa.com</p></Link>
                 </li>
                 <li className="footer-contact-item u-text-style-">
-                  @lauravelaflorensa
+                  <Link href={'#'}><p>@lauravelaflorensa</p></Link>
                 </li>
               </ul>
             </div>
           </div>
-        </div>
-        <div className="img">
-          <Image 
-          src="/images/footer.png"
-          width={1920}
-          height={1080}
-          alt="imagen decorativa de footer"
-          />
         </div>
       </div>
     </section>

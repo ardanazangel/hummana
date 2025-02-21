@@ -21,7 +21,7 @@ export default function MentorshipsRetreats() {
             }}
             />
             <div className="card">
-              <p className="">MENTORSHIPS</p>
+              <p className="small-title">MENTORSHIPS</p>
 
               <p className="low-opacity">
                 Una mentoría revolucionaria «one on one» para alcanzar la
@@ -46,7 +46,7 @@ export default function MentorshipsRetreats() {
             }}
             />
             <div className="card">
-              <p className="">RETREATS</p>
+              <p className="small-title">RETREATS</p>
 
               <p className="low-opacity">
                 Una mentoría revolucionaria «one on one» para alcanzar la

@@ -1,6 +1,7 @@
 import "./globals.css";
-import Header from "@/app/components/Header";
 import Footer from "./components/Footer";
+import Grid from "./components/Grid";
+import Header from "./components/Header";
 
 export const metadata = {
   title: "Hummana",
@@ -12,9 +13,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body>
+        {/*<Grid></Grid>*/}
         <Header />
-        {children}
-        <Footer/>
+        <div className="transition-wrapper">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

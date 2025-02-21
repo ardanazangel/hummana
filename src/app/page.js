@@ -3,7 +3,6 @@ import Hero from "./components/Hero";
 import MentorshipsRetreats from "./components/MentorshipsRetreats";
 import Values from "./components/Values";
 
-
 export default function Home() {
   return (
     <>

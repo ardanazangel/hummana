@@ -1,8 +1,8 @@
 .navbar{
-    padding: clamp(1rem, 0.936rem + 0.261vw, 1.25rem);
+    padding: 2vw;
     position: fixed;
     top: 0;
-    z-index: 9999999999999999999999;
+    z-index: 999999999999999999;
     width: 100%;
     color: var(--light-color);
 }
@@ -17,19 +17,39 @@ ul{
     font-weight: 200;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: clamp(0.825rem, 0.78rem + 0.183vw, 1rem);
+    font-size: 1vw;
 }
 
 .center{
-  margin-left: 0.5rem;
+  margin-left: 0.5vw;
 }
 
 .inner-pages-wrapper{
     display: flex;
-    gap: clamp(2rem, 1.307vw + 1.49rem, 4rem);
+    gap: 4vw;
 }
 
 a{
     color: var(--light-color);
 text-decoration: none;
+}
+
+@media (max-width: 600px) {
+
+    .navbar{
+        padding: 4vw;
+    }
+
+    .hero-banner-list{
+        padding: 4vw;
+    }
+
+    .nav-element{
+        font-size: 3.5vw;
+    }
+
+    .message-content{
+        max-width: calc(100% /1.5);
+        font-size: 6vw;
+    }
 }

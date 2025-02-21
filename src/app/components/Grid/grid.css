@@ -1,0 +1,40 @@
+:root{
+  --color: #2c3dba33;
+  --margext: 1.25rem;
+  --margint: 1rem;
+}
+  #gridbut{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: .5vw;
+    height: .5vw;
+    background: black;
+    z-index: 9999999999999999;
+    transition: 400ms ease;
+}
+#gridbut.on{
+  opacity: .1;
+}
+#gridbut:hover{
+  opacity: .5;
+}
+#grid{
+    width: calc(100vw - 2 * calc(var(--margext) - (var(--margint) / 2))) ;
+    height: 100vh;
+    display: flex;
+    margin: 0 calc(var(--margext) - (var(--margint) / 2));
+    position: fixed;
+    z-index: 9999999999999999;
+    pointer-events: none;
+    opacity: 0;
+    mix-blend-mode: multiply;
+}
+#grid.on{
+  opacity: 1;
+}
+#grid .column{
+  width: 100%;
+  background: var(--color);
+  margin: 0 calc(var(--margint)/2);
+}

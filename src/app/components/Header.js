@@ -1,61 +1,82 @@
 "use client";
 
-import { useEffect } from "react";
-import { usePathname } from "next/navigation"; // Detecta cambios de página
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import "./Header.css";
-import Link from "next/link";
+import { TransitionLink } from "./utils/TransitionLink";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Header() {
-  const pathname = usePathname(); // Obtiene la URL actual
+  const pathname = usePathname();
+  const headerRef = useRef(null);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const lightSection = document.querySelector(".light-section");
+    const lightSections = document.querySelectorAll(".light-section");
     const elements = document.querySelectorAll(".darken");
-
-    if (!lightSection) return;
-
-    const handleScroll = () => {
-      const rect = lightSection.getBoundingClientRect();
-      const isVisible = rect.top < window.innerHeight * 0.04 && rect.bottom > 0.03;
-
-      elements.forEach((element) => {
-        element.style.transition = "color 0.5s ease-in-out";
-        element.style.color = isVisible ? "var(--dark-color)" : "";
+    const ctx = gsap.context(() => {
+      lightSections.forEach((section) => {
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top 5%",
+          end: "bottom top",
+          onEnter: () => {
+            gsap.to(elements, {
+              color: "var(--dark-color)",
+              duration: 0.3,
+            });
+          },
+          onLeave: () => {
+            gsap.to(elements, {
+              color: "",
+              duration: 0.3,
+            });
+          },
+          onEnterBack: () => {
+            gsap.to(elements, {
+              color: "var(--dark-color)",
+              duration: 0.3,
+            });
+          },
+          onLeaveBack: () => {
+            gsap.to(elements, {
+              color: "",
+              duration: 0.3,
+            });
+          }
+        });
       });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    }, headerRef);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      ctx.revert();
     };
   }, [pathname]);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={headerRef}>
       <ul>
         <li className="white-type nav-element darken">
-          <Link className="darken" href="/" scroll={true}>
+          <TransitionLink className="darken" href="/" scroll={true}>
             Hummana
-          </Link>
+          </TransitionLink>
         </li>
         <li className="white-type nav-element center">
           <div className="inner-pages-wrapper">
-            <Link className="darken" href="/retreat" scroll={true}>
+            <TransitionLink className="darken" href="/retreat" scroll={true}>
               Retreat
-            </Link>
-            <Link className="darken" href="/mentorship" scroll={true}>
+            </TransitionLink>
+            <TransitionLink className="darken" href="/mentorship" scroll={true}>
               Mentorship
-            </Link>
+            </TransitionLink>
           </div>
         </li>
         <li className="white-type nav-element darken">
-          <Link className="darken" href="/about" scroll={true}>
+          <TransitionLink className="darken" href="/about" scroll={true}>
             About
-          </Link>
+          </TransitionLink>
         </li>
       </ul>
     </nav>

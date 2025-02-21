@@ -1,5 +1,5 @@
 import MentorshipsRetreats from "../components/MentorshipsRetreats";
-import "@/app/about/about.css";
+import "../about/about.css";
 import ReadMore from "../components/ReadMore";
 import AboutImage from "../components/AboutImage";
 import Image from "next/image";
@@ -13,7 +13,7 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
     <>
       <section className="about-principal about-principal-three-columns">
         <div className="page-title-wrapper">
-          <h1 style={{ width: "100%" }}>
+          <h1>
             <div className="line">
               <span className="hero-content white-type">Un</span>
               <span className="hero-content white-type">Viaje</span>
