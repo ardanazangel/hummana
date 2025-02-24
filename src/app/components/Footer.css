@@ -1,11 +1,13 @@
-.footer-section{
+.footer-section {
     background-color: var(--light-color);
     z-index: 20;
     color: var(--dark-color);
     padding: 2vw;
+    height: 80dvh;
 }
 
-.darken{
+
+.darken {
     transition: color .4s ease-in-out;
 
 }
@@ -14,34 +16,43 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 4vw;
+    height: 100%;
+
 }
 
 
-.footer-tag{
+.footer-tag {
     font-family: 'Andale';
     font-size: 1vw;
     text-transform: uppercase;
 }
 
-.footer-contacto{
+.footer-contacto {
     width: 100%;
 }
-.footer-list{
+
+.footer-list {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
 }
 
-.footer-contact-item{
+
+.logo-wrapper-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: calc(100% /2);
+}
+
+.footer-contact-item {
     text-transform: uppercase;
     font-size: 1.75vw;
     font-family: 'Andale';
     letter-spacing: -0.02em;
 
 }
-
-
-

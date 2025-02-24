@@ -54,11 +54,11 @@ export default function ModuloTexto() {
         </div>
         <div className="text-module__description">
           <p className="center-type">
-            Adéntrate en una experiencia donde la naturaleza cobra vida propia.
-            HUMMANA se encuentra en el pulmón de la isla de Bali, Indonesia. Un
-            oasis de paz y de tranquilidad donde disfrutarás la belleza de la
-            selva, las playas majestuosas y los atardeceres impactantes. Un
-            entorno salvaje para elevar tu mente, tu cuerpo y tu espíritu.
+            Bali trasciende la definición de una isla. Es un poderoso centro
+            energético que te regresa a tus raíces más profundas. Los balineses
+            tienen una honda conexión espiritual en la vida diaria, no solo para
+            ellos sino para la humanidad. Sé que Bali te acogerá y te recibirá
+            tal como lo necesitas en este momento de tu camino.
           </p>
         </div>
       </div>

@@ -30,7 +30,7 @@ export default function BannerProducts({
       },
       {
         y: "40%",
-        ease:'linear',
+        ease: "linear",
         scrollTrigger: {
           trigger: ".principal-banner-products",
           scrub: "true",
@@ -77,13 +77,13 @@ export default function BannerProducts({
             style={{
               display: "flex",
               flexDirection: "column",
-              width:'100%'
+              width: "100%",
             }}
           >
             <div className="line">{subtitleLine1}</div>
             <div className="line">{subtitleLine2}</div>
           </h3>
-          <p className="white-type center-type">{titleDescription}</p>
+          <>{titleDescription}</>
           <PrimaryButton
             href={bannerLink}
             label={bannerLinkLabel}

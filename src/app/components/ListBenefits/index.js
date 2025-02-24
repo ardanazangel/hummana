@@ -77,7 +77,7 @@ export default function ListBenefits() {
       description: (
         <p>
           <br />
-          Un masaje corporal detox balinés.
+          Transporte durante todo el retiro.
         </p>
       ),
     },

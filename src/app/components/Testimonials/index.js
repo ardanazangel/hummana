@@ -7,7 +7,7 @@ import gsap from "gsap";
 
 export default function Testimonial({ testimonials = [] }) {
   const [index, setIndex] = useState(0);
-  const testimonialRef = useRef(null); // Referencia para la animación
+  const testimonialRef = useRef(null);
 
   useEffect(() => {
     if (testimonials.length === 0) return;
@@ -18,13 +18,13 @@ export default function Testimonial({ testimonials = [] }) {
   }, [index, testimonials.length]);
 
   const changeTestimonial = (newIndex) => {
-    gsap.to(".testimonials-text-content", {
+    gsap.to(".testimonials-text-content, .testimonial-img", {
       opacity: 0,
       duration: 0.5,
       filter: "blur(2px)",
       onComplete: () => {
         setIndex(newIndex);
-        gsap.to(".testimonials-text-content", {
+        gsap.to(".testimonials-text-content, .testimonial-img", {
           opacity: 1,
           duration: 0.5,
           filter: "blur(0px)",
@@ -50,9 +50,9 @@ export default function Testimonial({ testimonials = [] }) {
       <div className="testimonial-video">
         <iframe
           src="https://player.vimeo.com/video/1058963501?autoplay=1&loop=1&muted=1&background=1"
-          frameBorder="0"
           allow="autoplay; fullscreen"
           allowFullScreen
+          frameBorder={0}
           title="Testimonial video"
           style={{
             position: "absolute",
@@ -70,12 +70,20 @@ export default function Testimonial({ testimonials = [] }) {
         <h2>Testimonials</h2>
         <div className="testimonial-content" ref={testimonialRef}>
           <div className="img testimonial-img">
-            <Image src="/hola" width={256} height={256} />
+            <Image
+              src={
+                testimonials[index].imagen || "/default-testimonial-image.jpg"
+              }
+              width={256}
+              height={256}
+              alt={`Portrait of ${testimonials[index].nombre}`}
+              style={{ scale: "1.25" }}
+            />
           </div>
           <div className="testimonials-text-content">
             <h3>{testimonials[index].nombre}</h3>
             <h4 className="uppercase">{testimonials[index].pais}</h4>
-            <p style={{ minHeight: "15vw" }}>"{testimonials[index].texto}"</p>
+            <p style={{ minHeight: "20vw" }}>"{testimonials[index].texto}"</p>
           </div>
 
           <div className="testimonials-buttons uppercase">

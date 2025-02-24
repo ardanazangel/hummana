@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: var(--light-color);
+
+}
+
 .logo-wrapper-footer>svg {
   width: 100%;
   height: auto;
@@ -159,7 +164,15 @@ h4 {
   font-family: "Andale";
   font-weight: 400;
   color: var(--dark-color);
-  font-size: 1.458 vw;
+  font-size: 1.458vw;
+  line-height: 1.2em;
+}
+
+h5 {
+  font-family: "Andale";
+  font-weight: 400;
+  color: var(--dark-color);
+  font-size: 1.1vw;
   line-height: 1.2em;
 }
 
@@ -588,7 +601,7 @@ p {
 
 .skills-unlocked__wrapper {
   position: absolute;
-  bottom: 35%;
+  bottom: 30%;
 }
 
 .activity-description {
@@ -629,6 +642,10 @@ p {
   gap: 1vw;
   width: calc(100% / 1.5);
   text-align: center;
+}
+
+.accomodation-text>h2 {
+  width: 75%;
 }
 
 @media (max-width: 600px) {

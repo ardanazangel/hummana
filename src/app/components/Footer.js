@@ -2,10 +2,9 @@
 
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
-{/*import "@/src/app/components/Footer.css";*/}
+import "../components/Footer.css";
 import LogoDark from "../components/LogoDark";
-import Image from "next/image";
-import '../components/Footer.css'
+import "../components/Footer.css";
 import Link from "next/link";
 
 export default function Footer() {
@@ -21,7 +20,6 @@ export default function Footer() {
       smoothTouch: true,
       touchMultiplier: 0.5,
     });
-    
 
     lenisRef.current = lenis;
 
@@ -39,31 +37,36 @@ export default function Footer() {
 
   return (
     <section className="footer-section light-section">
-      <div className="footer-grid">
-        <div className="footer-info">
-          <div className="footer-info-content">
-            <div className="logo-wrapper-footer">
-              <LogoDark />
-            </div>
-            <div className="footer-contacto">
-              <ul className="footer-list">
-                <li className="footer-contact-item u-text-style-">
-                <Link href={'#'}><p>Bali, Indonesia</p></Link>
-
-                </li>
-                <li className="footer-contact-item u-text-style-">
-                  <Link href={'#'}><p>+51 965 292 537</p></Link>
-
-                </li>
-                <li className="footer-contact-item u-text-style-">
-                  <Link href={'#'}><p>hello@lauravelaflorensa.com</p></Link>
-                </li>
-                <li className="footer-contact-item u-text-style-">
-                  <Link href={'#'}><p>@lauravelaflorensa</p></Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <div className="footer-info-content">
+        <div className="logo-wrapper-footer">
+          <LogoDark />
+        </div>
+        <div className="footer-contacto">
+          <ul className="footer-list">
+            <li className="footer-contact-item u-text-style-">
+              <Link href={"#"}>
+                <p>Bali, Indonesia</p>
+              </Link>
+            </li>
+            <li className="footer-contact-item u-text-style-">
+              <Link href={"#"}>
+                <p>+51 965 292 537</p>
+              </Link>
+            </li>
+            <li className="footer-contact-item u-text-style-">
+              <Link href={"emailto:hello@lauravelaflorensa.com"}>
+                <p>hello@lauravelaflorensa.com</p>
+              </Link>
+            </li>
+            <li className="footer-contact-item u-text-style-">
+              <Link
+                href={"https://www.instagram.com/lauravelaflorensa/"}
+                target="_blank"
+              >
+                <p>@lauravelaflorensa</p>
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

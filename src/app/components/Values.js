@@ -112,22 +112,18 @@ export default function Values() {
       },
       {
         y: "-25%",
-                ease:'linear',
-
+        ease: "linear",
       }
     );
 
     imageTl.to(".central-image-tracker", {
       y: "-50%",
-      ease:'linear',
-
-
+      ease: "linear",
     });
 
     imageTl.to(".central-image-tracker", {
       y: "-75%",
-      ease:'linear',
-
+      ease: "linear",
     });
   }, []);
   return (
@@ -180,29 +176,33 @@ export default function Values() {
             <div className="img">
               <Image
                 src="/images/carousel/practice-purpose-1.png"
-                width={1280}
-                height={1920}
+                width={600}
+                height={800}
+                alt="Practice purpose carousel image" // Añadido alt
               />
             </div>
             <div className="img">
               <Image
                 src="/images/carousel/bewilling-toevolve-1.png"
-                width={1280}
-                height={1920}
+                width={600}
+                height={800}
+                alt="Be willing to evolve - carousel image"
               />
             </div>
             <div className="img">
               <Image
                 src="/images/carousel/find-your-truth-1.png"
-                width={1280}
-                height={1920}
+                width={600}
+                height={800}
+                alt="Find your truth - carousel image"
               />
             </div>
             <div className="img">
               <Image
-                src="/images/carousel/find-your-truth-2.png"
-                width={1280}
-                height={1920}
+                src="/images/carousel/practice-purpose-1.png"
+                width={600}
+                height={800}
+                alt="Practice purpose - carousel image"
               />
             </div>
           </div>
@@ -216,6 +216,7 @@ export default function Values() {
               src="/images/carousel/practice-purpose-2.png"
               width={1920}
               height={1080}
+              alt="Practice purpose - background image"
             />
           </div>
         </div>
@@ -225,6 +226,7 @@ export default function Values() {
               src="/images/carousel/bewilling-toevolve-2.png"
               width={1920}
               height={1080}
+              alt="Be willing to evolve - background image"
             />
           </div>
         </div>
@@ -234,6 +236,7 @@ export default function Values() {
               src="/images/carousel/find-your-truth-2.png"
               width={1920}
               height={1080}
+              alt="Find your truth - background image"
             />
           </div>
         </div>
@@ -243,6 +246,7 @@ export default function Values() {
               src="/images/carousel/practice-purpose-2.png"
               width={1920}
               height={1080}
+              alt="Practice purpose - final background image"
             />
           </div>
         </div>

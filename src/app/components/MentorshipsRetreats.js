@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 export default function MentorshipsRetreats() {
   return (
     <section className="mentorships-retreats-section">
@@ -10,15 +9,14 @@ export default function MentorshipsRetreats() {
             <h2 className="white-type">Mentorships</h2>
           </div>
           <div className="img">
-            <Image 
-            src="/images/mentorships.webp" 
-            width={1920}
-            height={2560}
-            alt="mentorships cover selector"
-            style={{
-              filter:'brightness(.75)'
-
-            }}
+            <Image
+              src="/images/mentorships.webp"
+              width={1280}
+              height={1920}
+              alt="One-on-one mentorship program background image"
+              style={{
+                filter: "brightness(.75)",
+              }}
             />
             <div className="card">
               <p className="small-title">MENTORSHIPS</p>
@@ -32,18 +30,18 @@ export default function MentorshipsRetreats() {
           </div>
         </div>
         <div className="part-wrapper retreats-wrapper">
-        <div className="title-sections-wrapper">
+          <div className="title-sections-wrapper">
             <h2 className="white-type">Retreats</h2>
           </div>
           <div className="img">
             <Image
-            src="/images/retreats.jpg" 
-            width={1920}
-            height={2560}
-            alt="retreats cover selector"
-            style={{
-              filter:'brightness(.75)'
-            }}
+              src="/images/retreats.jpg"
+              width={1280}
+              height={1920}
+              alt="Group retreats program background image"
+              style={{
+                filter: "brightness(.75)",
+              }}
             />
             <div className="card">
               <p className="small-title">RETREATS</p>

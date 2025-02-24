@@ -39,8 +39,14 @@ export default function ActividadesRetreat() {
   const handleImageChange = (activity) => {
     if (!imageRefs.current[activity]) return;
 
-    gsap.to(".activity-image", { opacity: 0, duration: 0.3 });
-    gsap.to(imageRefs.current[activity], { opacity: 1, duration: 0.5 });
+    gsap.to(".activity-image", {
+      opacity: 0,
+      duration: 0.3,
+    });
+    gsap.to(imageRefs.current[activity], {
+      opacity: 1,
+      duration: 0.5,
+    });
 
     setActiveActivity(activity);
     setActivityText(activityDescriptions[activity]);
@@ -68,8 +74,8 @@ export default function ActividadesRetreat() {
                 src={`/images/retreat/activities/${activity
                   .toLowerCase()
                   .replace(/ /g, "-")}.jpg`}
-                width={640}
-                height={480}
+                width={600}
+                height={600}
                 alt={activity}
                 style={{ filter: "brightness(.80)" }}
                 priority
@@ -101,14 +107,14 @@ export default function ActividadesRetreat() {
 
       <div className="activities-list-wrapper">
         <h2 className="white-type">Experiences</h2>
-        <h4
+        <h5
           className="center-type white-type"
           style={{ opacity: ".4", marginBottom: "2vw", width: "75%" }}
         >
           HUMMANA es un viaje de desarrollo personal que te impulsará para
           llevar a cabo tu visión personal a través de la conexión MENTE-
           CUERPO- ESPÍRITU.
-        </h4>
+        </h5>
         {Object.entries(experiences).map(([category, activities]) => (
           <div key={category}>
             <p
