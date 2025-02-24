@@ -46,49 +46,47 @@ export default function ModuloTexto() {
   return (
     <section className="modulo-texto">
       <div className="circle__wrapper">
-        <div className="circle"></div>
+        <div className="circle" style={{ borderRadius: "999" }}></div>
       </div>
       <div className="module-content">
         <div className="text-module__title">
-          <h2 className="center-type">Be empowered</h2>
+          <h2 className="center-type">Be Connected</h2>
         </div>
         <div className="text-module__description">
           <p className="center-type">
-            Bali trasciende la definición de una isla. Es un poderoso centro
-            energético que te regresa a tus raíces más profundas. Los balineses
-            tienen una honda conexión espiritual en la vida diaria, no solo para
-            ellos sino para la humanidad. Sé que Bali te acogerá y te recibirá
-            tal como lo necesitas en este momento de tu camino.
+            Adéntrate en una experiencia donde la naturaleza cobra vida propia.
+            HUMMANA se encuentra en el pulmón de la isla de Bali, Indonesia. Un
+            oasis de paz y de tranquilidad donde disfrutarás la belleza de la
+            selva, las playas majestuosas y los atardeceres impactantes. Un
+            entorno salvaje para elevar tu mente, tu cuerpo y tu espíritu.
           </p>
         </div>
       </div>
 
       <div className="module-content">
         <div className="text-module__title">
-          <h2 className="center-type">Be empowered</h2>
+          <h2 className="center-type">Be Opened</h2>
         </div>
         <div className="text-module__description">
           <p className="center-type">
-            Bali trasciende la definición de una isla. Es un poderoso centro
-            energético que te regresa a tus raíces más profundas. Los balineses
-            tienen una honda conexión espiritual en la vida diaria, no solo para
-            ellos sino para la humanidad. Sé que Bali te acogerá y te recibirá
-            tal como lo necesitas en este momento de tu camino.
+            HUMMANA es un puente para emprendedores, creativos, altos
+            directivos, soñadores, almas curiosas y exploradoras, de distintas
+            partes del mundo, dispuestos a la aventura y al autoconocimiento. La
+            única regla es venir con una mente abierta.
           </p>
         </div>
       </div>
 
       <div className="module-content">
         <div className="text-module__title">
-          <h2 className="center-type">Be empowered</h2>
+          <h2 className="center-type">Be Empowered</h2>
         </div>
         <div className="text-module__description">
           <p className="center-type">
-            Bali trasciende la definición de una isla. Es un poderoso centro
-            energético que te regresa a tus raíces más profundas. Los balineses
-            tienen una honda conexión espiritual en la vida diaria, no solo para
-            ellos sino para la humanidad. Sé que Bali te acogerá y te recibirá
-            tal como lo necesitas en este momento de tu camino.
+            HUMMANA es un retiro contemporáneo que cuenta con un cutting-edge
+            program centrado en el desarrollo personal en el que la optimización
+            de la productividad (hacer) coexiste con el cuidado del bienestar
+            interno (ser).
           </p>
         </div>
       </div>

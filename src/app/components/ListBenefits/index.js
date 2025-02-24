@@ -86,9 +86,7 @@ export default function ListBenefits() {
       description: (
         <p>
           <br />
-          Entrarás en un proceso de exploración y crecimiento personal en el que
-          serás guiado durante ocho semanas. Para aquellos que buscan apoyo
-          altamente personalizado, HUMMANA ofrece una mentoría «one on one».
+          Un masaje corporal detox balinés.
         </p>
       ),
     },
@@ -219,7 +217,7 @@ export default function ListBenefits() {
           </p>
         </div>
       </div>
-      <div className="img" style={{ height: "75vw" }}>
+      <div className="img" style={{ height: "65vw" }}>
         <Image
           width={720}
           height={1280}

@@ -53,6 +53,7 @@ export default function Testimonial({ testimonials = [] }) {
           frameBorder="0"
           allow="autoplay; fullscreen"
           allowFullScreen
+          title="Testimonial video"
           style={{
             position: "absolute",
             top: 0,
