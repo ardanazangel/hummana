@@ -16,7 +16,7 @@
 .list-content {
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 2vw;
 
 
 }

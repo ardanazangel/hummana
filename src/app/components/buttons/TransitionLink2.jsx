@@ -1,9 +1,11 @@
 import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
+import { useLenis } from "@studio-freight/react-lenis";
 
 export default function TransitionLink2({ href, Label }) {
   const router = useTransitionRouter();
   const pathname = usePathname();
+  const lenis = useLenis();
 
   const pageAnimation = () => {
     document.documentElement.animate(
@@ -24,6 +26,7 @@ export default function TransitionLink2({ href, Label }) {
         easing: "cubic-bezier(0.79, 0.14, 0.15, 0.86)",
       }
     );
+
     document.documentElement.animate(
       [
         {
@@ -36,13 +39,14 @@ export default function TransitionLink2({ href, Label }) {
         },
       ],
       {
-        delay: 1200,
         duration: 1000,
+        delay: 1000,
         fill: "forwards",
         pseudoElement: "::view-transition-new(root)",
         easing: "cubic-bezier(0.79, 0.14, 0.15, 0.86)",
       }
     );
+    lenis.scrollTo(0, { inmediate: true });
   };
   return (
     <a

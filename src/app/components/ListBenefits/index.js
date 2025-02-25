@@ -184,7 +184,7 @@ export default function ListBenefits() {
     <section className="benefitslist-wrapper">
       <div className="list-wrapper">
         <div className="list-content">
-          <p className="uppercase">Incluido en Hummana</p>
+          <p className="uppercase center-type">Incluido en Hummana</p>
           <ul className="list">
             {benefits.map((benefit, index) => (
               <li key={index}>

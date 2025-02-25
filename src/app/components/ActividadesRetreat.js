@@ -32,10 +32,9 @@ export default function ActividadesRetreat() {
 
   const imageRefs = useRef({});
   const textRef = useRef(null);
-
-  const [activeActivity, setActiveActivity] = useState(null);
-  const [activityText, setActivityText] = useState("");
-
+  // Set initial activity to the first item of MIND category
+  const [activeActivity, setActiveActivity] = useState(experiences.MIND[0]);
+  const [activityText, setActivityText] = useState(activityDescriptions[experiences.MIND[0]]);
   const handleImageChange = (activity) => {
     if (!imageRefs.current[activity]) return;
 
@@ -56,17 +55,19 @@ export default function ActividadesRetreat() {
     <section className="retreat-activities-wrapper">
       <div className="img-activity-wrapper">
         {Object.values(experiences).map((activities) =>
-          activities.map((activity, index) => (
+          activities.map((activity) => (
             <div
-              key={index}
+              key={activity}
               ref={(el) => (imageRefs.current[activity] = el)}
-              className={`activity-image ${index === 0 ? "active" : ""}`}
+              className={`activity-image ${
+                activity === activeActivity ? "active" : ""
+              }`}
               style={{
                 background: "#333",
                 position: "absolute",
                 width: "100%",
                 height: "100%",
-                opacity: index === 0 ? 1 : 0,
+                opacity: activity === activeActivity ? 1 : 0,
                 willChange: "opacity",
               }}
             >
@@ -83,7 +84,7 @@ export default function ActividadesRetreat() {
             </div>
           ))
         )}
-
+        
         {activityText && (
           <div className="activity-overlay" ref={textRef}>
             {Object.entries(experiences).map(
