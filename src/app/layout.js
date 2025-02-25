@@ -2,6 +2,7 @@ import "./globals.css";
 import Grid from "./components/Grid";
 import Header from "./components/Header";
 import LenisProvider from "./components/LenisProvider";
+import { ViewTransitions } from "next-view-transitions";
 
 export const metadata = {
   title: "Hummana",
@@ -10,14 +11,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        <LenisProvider>
-          {/*<Grid></Grid>*/}
-          <Header />
-          <div className="transition-wrapper">{children}</div>
-        </LenisProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body>
+          <LenisProvider>
+            {/*<Grid></Grid>*/}
+            <Header />
+            <div className="transition-wrapper">{children}</div>
+          </LenisProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

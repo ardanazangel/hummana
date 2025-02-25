@@ -6,6 +6,7 @@ import "./Header.css";
 import { TransitionLink } from "./utils/TransitionLink";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import TransitionLink2 from "./buttons/TransitionLink2";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,19 +60,19 @@ export default function Header() {
     <nav className="navbar" ref={headerRef}>
       <ul>
         <li className="white-type nav-element darken">
-          <TransitionLink className="darken" href="/" scroll={true}>
-            Hummana
-            <div className="underline"></div>
-          </TransitionLink>
+          <TransitionLink2 href={"/"} Label={"Hummana"}></TransitionLink2>
         </li>
         <li className="white-type nav-element center">
-          <div className="inner-pages-wrapper">
-            <TransitionLink className="darken" href="/retreat" scroll={true}>
-              Retreat
-            </TransitionLink>
-            <TransitionLink className="darken" href="/mentorship" scroll={true}>
-              Mentorship
-            </TransitionLink>
+          <div className="inner-pages-wrapper darken">
+            <TransitionLink2
+              href={"retreat"}
+              Label={"Retreat"}
+              className="darken"
+            ></TransitionLink2>
+            <TransitionLink2
+              href={"mentorship"}
+              Label={"Mentorship"}
+            ></TransitionLink2>
           </div>
         </li>
         <li className="white-type nav-element darken">

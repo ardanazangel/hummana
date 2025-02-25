@@ -3,6 +3,7 @@ import "../about/about.css";
 import ReadMore from "../components/ReadMore";
 import AboutImage from "../components/AboutImage";
 import Image from "next/image";
+import Footer from "../components/Footer";
 
 export default function About() {
   const secondBlockExtra = `\n\n Ha trabajado con algunas de las empresas líderes del mundo, con directores ejecutivos, médicos, abogados, creativos, celebridades, atletas de alto rendimiento y emprendedores, a través de sus programas de fortalecimiento de mentalidad, meditación y atención plena. Es consultora y mentora de alto rendimiento, oradora motivacional y emprendedora social. Dirige retiros, talleres y cursos de formación en distintas partes del mundo. `;
@@ -19,7 +20,7 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
               <span className="hero-content white-type">Viaje</span>
               <span className="hero-content white-type">De</span>
             </div>
-            
+
             <div className="line">
               <span className="hero-content white-type">Fuera</span>
               <span className="hero-content white-type">Hacia</span>
@@ -92,12 +93,12 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
             </div>
           </div>
           <div className="img">
-            <Image 
-            src="/images/surf.png" 
-            width={1920}
-            height={1080}
-            style={{ background: "red" }} 
-            alt="Laura Vela surfeando"
+            <Image
+              src="/images/surf.png"
+              width={1920}
+              height={1080}
+              style={{ background: "red" }}
+              alt="Laura Vela surfeando"
             />
           </div>
         </div>
@@ -139,6 +140,7 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
         </div>
       </section>
       <MentorshipsRetreats />
+      <Footer />
     </>
   );
 }
