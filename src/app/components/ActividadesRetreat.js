@@ -97,9 +97,16 @@ export default function ActividadesRetreat() {
                 )
             )}
             <p className="white-type">{activityText[0]}</p>
+            <p className="white-type">{activityText[2]}</p>
+
             <div className="skills-unlocked__wrapper">
-              <h4 className="white-type uppercase">Skills unlocked:</h4>
-              <p className="white-type">{activityText[1]}</p>
+              <h4 className="white-type uppercase">Skill unlocked:</h4>
+              <h5
+                className="white-type uppercase"
+                style={{ paddingTop: ".5vw" }}
+              >
+                {activityText[1]}
+              </h5>
             </div>
           </div>
         )}
@@ -109,7 +116,7 @@ export default function ActividadesRetreat() {
         <h2 className="white-type">Experiences</h2>
         <h5
           className="center-type white-type"
-          style={{ opacity: ".4", marginBottom: "2vw", width: "75%" }}
+          style={{ marginBottom: "2vw", width: "75%" }}
         >
           HUMMANA es un viaje de desarrollo personal que te impulsará para
           llevar a cabo tu visión personal a través de la conexión MENTE-

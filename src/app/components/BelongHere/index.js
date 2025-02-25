@@ -12,7 +12,7 @@ export default function YouBelongHere({ src, description }) {
         <h3>
           <div className="line white-type">
             <span>You</span>
-            <span className="center-align">Belong</span>
+            <span className="middle-element">Belong</span>
             <span>Here</span>
           </div>
         </h3>

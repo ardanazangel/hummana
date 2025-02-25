@@ -1,7 +1,7 @@
 import "./globals.css";
-import Footer from "./components/Footer";
 import Grid from "./components/Grid";
 import Header from "./components/Header";
+import LenisProvider from "./components/LenisProvider";
 
 export const metadata = {
   title: "Hummana",
@@ -11,14 +11,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head />
       <body>
-        {/*<Grid></Grid>*/}
-        <Header />
-        <div className="transition-wrapper">
-          {children}
-          <Footer />
-        </div>
+        <LenisProvider>
+          {/*<Grid></Grid>*/}
+          <Header />
+          <div className="transition-wrapper">{children}</div>
+        </LenisProvider>
       </body>
     </html>
   );

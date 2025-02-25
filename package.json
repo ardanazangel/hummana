@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/react-lenis": "^0.0.47",
     "color-thief-browser": "^2.0.2",
     "gsap": "^3.12.7",
     "lenis": "^1.1.20",

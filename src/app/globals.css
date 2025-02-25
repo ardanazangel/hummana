@@ -468,7 +468,7 @@ p {
   gap: 0vw;
   padding: 0 3.3vw;
   cursor: default;
-  height: 75vh;
+  height: 35vw;
   position: relative;
 }
 
@@ -529,6 +529,14 @@ p {
 .modulo-texto:hover .circle {
   opacity: 1;
 }
+
+.modulo-texto__frasecilla {
+  width: calc(100vw);
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 2vw;
+}
+
 
 .activities-list-wrapper {
   display: flex;
@@ -601,7 +609,8 @@ p {
 
 .skills-unlocked__wrapper {
   position: absolute;
-  bottom: 30%;
+  bottom: 15%;
+  transform: translate(0, -50%);
 }
 
 .activity-description {

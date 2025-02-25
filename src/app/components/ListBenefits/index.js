@@ -221,7 +221,7 @@ export default function ListBenefits() {
         <Image
           width={720}
           height={1280}
-          src={"/images/mentorship/tailoringyourmentorship.png"}
+          src={"/images/retreat/the-value.jpg"}
           alt="tailoring your mentorship image"
         />
       </div>

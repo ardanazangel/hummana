@@ -20,7 +20,7 @@ export default function Header() {
       lightSections.forEach((section) => {
         ScrollTrigger.create({
           trigger: section,
-          start: "top 5%",
+          start: "top top",
           end: "bottom top",
           onEnter: () => {
             gsap.to(elements, {
@@ -30,7 +30,7 @@ export default function Header() {
           },
           onLeave: () => {
             gsap.to(elements, {
-              color: "",
+              color: "var(--light-color)",
               duration: 0.3,
             });
           },
@@ -42,10 +42,10 @@ export default function Header() {
           },
           onLeaveBack: () => {
             gsap.to(elements, {
-              color: "",
+              color: "var(--light-color)",
               duration: 0.3,
             });
-          }
+          },
         });
       });
     }, headerRef);
@@ -61,6 +61,7 @@ export default function Header() {
         <li className="white-type nav-element darken">
           <TransitionLink className="darken" href="/" scroll={true}>
             Hummana
+            <div className="underline"></div>
           </TransitionLink>
         </li>
         <li className="white-type nav-element center">

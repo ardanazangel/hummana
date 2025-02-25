@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     padding: 2vw;
     position: fixed;
     top: 0;
@@ -7,12 +7,12 @@
     color: var(--light-color);
 }
 
-ul{
+ul {
     display: flex;
     justify-content: space-between;
 }
 
-.nav-element{
+.nav-element {
     font-family: 'Andale';
     font-weight: 200;
     text-decoration: none;
@@ -20,35 +20,36 @@ ul{
     font-size: 1vw;
 }
 
-.center{
-  margin-left: 0.5vw;
+.center {
+    margin-left: 0.5vw;
 }
 
-.inner-pages-wrapper{
+.inner-pages-wrapper {
     display: flex;
     gap: 4vw;
 }
 
-a{
+a {
     color: var(--light-color);
-text-decoration: none;
+    text-decoration: none;
 }
+
 
 @media (max-width: 600px) {
 
-    .navbar{
+    .navbar {
         padding: 4vw;
     }
 
-    .hero-banner-list{
+    .hero-banner-list {
         padding: 4vw;
     }
 
-    .nav-element{
+    .nav-element {
         font-size: 3.5vw;
     }
 
-    .message-content{
+    .message-content {
         max-width: calc(100% /1.5);
         font-size: 6vw;
     }

@@ -1,45 +1,33 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import Lenis from "lenis";
 import "../components/Footer.css";
 import LogoDark from "../components/LogoDark";
 import "../components/Footer.css";
 import Link from "next/link";
+import { TransitionLink } from "./utils/TransitionLink";
 
-export default function Footer() {
-  const lenisRef = useRef(null); // Referencia de Lenis
-
-  useEffect(() => {
-    // Inicializa Lenis (scroll suave)
-
-    const lenis = new Lenis({
-      duration: 2.5,
-      smooth: true,
-      direction: "vertical",
-      smoothTouch: true,
-      touchMultiplier: 0.5,
-    });
-
-    lenisRef.current = lenis;
-
-    // Función de actualización de Lenis
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy(); // Limpia Lenis al desmontar el componente
-    };
-  }, []);
-
+export default function Footer({ fraseFooter }) {
   return (
     <section className="footer-section light-section">
+      <div className="frase-diferente__footer uppercase">{fraseFooter}</div>
       <div className="footer-info-content">
         <div className="logo-wrapper-footer">
           <LogoDark />
+          <ul className="footer-menu">
+            <li>
+              <TransitionLink href={"/hello"}>
+                <h3>Retreat</h3>
+              </TransitionLink>
+            </li>
+            <li className="middle-element">
+              <TransitionLink href={"/hello"}>
+                <h3>About</h3>
+              </TransitionLink>
+            </li>
+            <li>
+              <TransitionLink href={"/hello"}>
+                <h3>Mentorship</h3>
+              </TransitionLink>
+            </li>
+          </ul>
         </div>
         <div className="footer-contacto">
           <ul className="footer-list">

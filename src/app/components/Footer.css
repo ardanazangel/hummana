@@ -2,8 +2,8 @@
     background-color: var(--light-color);
     z-index: 20;
     color: var(--dark-color);
-    padding: 2vw;
     height: 80dvh;
+    position: relative;
 }
 
 
@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
     gap: 4vw;
     height: 100%;
 
@@ -31,6 +31,7 @@
 
 .footer-contacto {
     width: 100%;
+    padding: 2vw;
 }
 
 .footer-list {
@@ -47,6 +48,8 @@
     justify-content: center;
     height: 100%;
     width: calc(100% /2);
+    position: absolute;
+    flex-direction: column;
 }
 
 .footer-contact-item {
@@ -55,4 +58,22 @@
     font-family: 'Andale';
     letter-spacing: -0.02em;
 
+}
+
+.middle-element {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.footer-menu {
+    padding-top: 1vw;
+    width: 100%;
+}
+
+.frase-diferente__footer {
+    position: absolute;
+    top: 2vw;
+    left: 50%;
+    transform: translate(-50%, 0);
 }

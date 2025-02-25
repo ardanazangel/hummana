@@ -83,12 +83,14 @@ export default function BannerProducts({
             <div className="line">{subtitleLine1}</div>
             <div className="line">{subtitleLine2}</div>
           </h3>
-          <>{titleDescription}</>
-          <PrimaryButton
-            href={bannerLink}
-            label={bannerLinkLabel}
-            style={{ color: "white" }}
-          />
+          <div className="first-content__hero-inner">
+            <>{titleDescription}</>
+            <PrimaryButton
+              href={bannerLink}
+              label={bannerLinkLabel}
+              style={{ color: "white" }}
+            />
+          </div>
         </div>
       </div>
       <div className="first-content contenido-servicios">

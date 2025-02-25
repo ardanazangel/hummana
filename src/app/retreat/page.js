@@ -8,6 +8,7 @@ import Image from "next/image";
 import Value from "../components/Value";
 import ListBenefits from "../components/ListBenefits";
 import Accomodation from "../components/Accomodation";
+import Footer from "../components/Footer";
 
 export default function Page() {
   const testimonialsData = [
@@ -44,29 +45,33 @@ export default function Page() {
         title={"Retreat"}
         subtitleLine1={
           <>
-            <span>Rewire</span>
-            <span>Your</span>
-            <span>Mind</span>
+            <span>Human</span>
+            <span>Grounded</span>
+            <span>In</span>
+            <span>Nature</span>
           </>
         }
-        subtitleLine2={
-          <>
-            <span>Reshape</span>
-            <span>Your</span>
-            <span>Life</span>
-          </>
-        }
+        // subtitleLine2={
+        //   <>
+        //     <span>Reshape</span>
+        //     <span className="middle-element">Your</span>
+        //     <span>Life</span>
+        //   </>
+        // }
         titleDescription={
           <>
+            <h4 className="white-type uppercase">A transformative journey</h4>
             <p className="white-type center-type">
-              <br />
-              A transformative journey <br />
               Fortalece la mente, mueve el cuerpo, conecta con el corazón.
             </p>
-            <p className="white-type center-type">
+            <h5 className="white-type uppercase">
               <br />
-              HUMMANA es más que un retiro. Es aventura, conexión y desarrollo
-              personal en el pulmón de Bali, Indonesia. 
+              HUMMANA es más que un retiro.
+              <br />
+            </h5>
+            <p className="white-type center-type">
+               Es aventura, conexión y desarrollo personal en el pulmón de Bali,
+              Indonesia. 
               <br />
               Es entrar abiertos a descubrir algo que estaba dentro de nosotros,
               y regresar con nuevas capacidades.
@@ -95,13 +100,19 @@ export default function Page() {
         src={"/images/retreat/youbelonghere.png"}
         description={
           <>
-            Líderes, CEO'S, empresarios, creativos, ejecutivos, artistas,
-            emprendedoresque están en la búsqueda de un significado mayor para
-            su vida y para su carrera profesional.
+            Este retiro es para <br />
+            <strong>
+              LÍDERES, EMPRENDEDORES, VISIONARIOS, CHANGE MAKERS, CREATIVOS,
+              AMANTES DEL OCÉANO
+            </strong>
             <br />
             <br />
-            HUMMANA mentorship es un proceso de desarrollo personal
-            revolucionario a nivel intelectual, emocional y espiritual.
+            Que quieren impulsar su proyecto personal o laboral.
+            <br />
+            Que buscan ampliar su creatividad y su bienestar.
+            <br />
+            Que desean conectar con personas conscientes y afines en valores y
+            estilos de vida.
           </>
         }
       />
@@ -114,8 +125,16 @@ export default function Page() {
           }
         />
         <ListBenefits />
-        <Value />
       </div>
+
+      <Value />
+      <Footer
+        fraseFooter={
+          <h4 className="center-type">
+            A place to evolve. A place to inspire.
+          </h4>
+        }
+      />
     </>
   );
 }
