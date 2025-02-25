@@ -9,14 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@studio-freight/react-lenis": "^0.0.47",
-    "color-thief-browser": "^2.0.2",
     "gsap": "^3.12.7",
     "lenis": "^1.1.20",
     "next": "15.1.6",
     "next-view-transitions": "^0.3.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "scroll-snap": "^4.0.5",
     "split-type": "^0.3.4"
   },
