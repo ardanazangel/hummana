@@ -21,7 +21,7 @@ export default function Header() {
       lightSections.forEach((section) => {
         ScrollTrigger.create({
           trigger: section,
-          start: "top top",
+          start: "top 10%",
           end: "bottom top",
           onEnter: () => {
             gsap.to(elements, {
@@ -57,7 +57,11 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <nav className="navbar" ref={headerRef}>
+    <nav
+      className="navbar "
+      ref={headerRef}
+      style={{ viewTransitionName: "navbar" }}
+    >
       <ul>
         <li className="white-type nav-element darken">
           <TransitionLink2 href={"/"} Label={"Hummana"}></TransitionLink2>

@@ -4,7 +4,6 @@ import ModuloTexto from "../components/ModuloTexto";
 import ActividadesRetreat from "../components/ActividadesRetreat";
 import Testimonials from "../components/Testimonials";
 import YouBelongHere from "../components/BelongHere";
-import Image from "next/image";
 import Value from "../components/Value";
 import ListBenefits from "../components/ListBenefits";
 import Accomodation from "../components/Accomodation";
@@ -51,13 +50,6 @@ export default function Page() {
             <span>Nature</span>
           </>
         }
-        // subtitleLine2={
-        //   <>
-        //     <span>Reshape</span>
-        //     <span className="middle-element">Your</span>
-        //     <span>Life</span>
-        //   </>
-        // }
         titleDescription={
           <>
             <h4 className="white-type uppercase">A transformative journey</h4>
@@ -125,6 +117,53 @@ export default function Page() {
           }
         />
         <ListBenefits />
+        <section className="benefits__section">
+          <h2>The Benefits</h2>
+          <div className="benefits__wrapper">
+            <div className="benefits__module">
+              <h3>
+                Resiliencia <br />
+                para la mente
+              </h3>
+              <p>
+                Desarrolla una mentalidad sólida para navegar los desafíos de la
+                vida.
+              </p>
+              <p className="tag">
+                *El 90% de los participantes afirman sentirse más resilientes
+                después del retiro.
+              </p>
+            </div>
+            <div className="benefits__module">
+              <h3>
+                determinación <br />
+                para el cuerpo
+              </h3>
+              <p>
+                Aprende prácticas de bienestar para vivir una vida limpia y
+                mantener un cuerpo fuerte y sano.
+              </p>
+              <p className="tag">
+                *El 95% de los participantes afirman sentirse con más vitalidad
+                después del retiro.
+              </p>
+            </div>
+            <div className="benefits__module">
+              <h3>
+                Confianza <br />
+                para el espíritu
+              </h3>
+              <p>
+                Aviva la chispa de aquello que te mueve por dentro y vive en
+                coherencia con ello.
+              </p>
+              <p className="tag">
+                *El 88% de los participantes aseguran terminar el retiro tomando
+                decisiones más acordes con su persona.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
 
       <Value />

@@ -101,7 +101,7 @@ video {
 h1 {
   font-family: "Andale";
   font-weight: 400;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.085em;
   text-transform: uppercase;
   font-size: 4.16vw;
   line-height: 1em;
@@ -661,6 +661,64 @@ p {
 
 .accomodation-text>h2 {
   width: 75%;
+}
+
+.benefits__section {
+  padding: 10vw 0 4vw;
+  text-align: center;
+}
+
+.benefits__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.benefits__module {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2vw 4vw;
+  gap: 1vw;
+}
+
+.text-module__section {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 10vw 4vw;
+  min-height: 40vw;
+  gap: 4vw;
+
+}
+
+.one-module__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2vw;
+  width: 100%;
+}
+
+.one-module__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5vw;
+}
+
+.action-plan__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.one-module__wrapper>h4 {
+  text-transform: uppercase;
 }
 
 @media (max-width: 600px) {

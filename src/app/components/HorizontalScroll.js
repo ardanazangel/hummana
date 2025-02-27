@@ -89,7 +89,7 @@ export default function HorizontalScroll() {
       { scaleX: 1 }
     );
 
-    imagesTl.fromTo(".image-1", { opacity: 1 }, { opacity: 0, });
+    imagesTl.fromTo(".image-1", { opacity: 1 }, { opacity: 0 });
     imagesTl.fromTo(".image-2", { opacity: 1 }, { opacity: 0 });
     imagesTl.fromTo(".image-3", { opacity: 1 }, { opacity: 0 });
     imagesTl.fromTo(".image-4", { opacity: 1 }, { opacity: 0 });
@@ -100,14 +100,14 @@ export default function HorizontalScroll() {
 
   return (
     <section ref={containerRef} className="horizontal-scroll">
-      <div className="image-fixed-wrapper" style={{filter:'brightness(.7)'}}>
+      <div className="image-fixed-wrapper" style={{ filter: "brightness(.7)" }}>
         <Image
           src="/images/mentorship/eight-steps/01.png"
           width={1280}
           height={1920}
           style={{ position: "absolute", zIndex: "-1" }}
           className="horizontal-scroll-images image-1"
-          alt='breathwork background image'
+          alt="breathwork background image"
         />
         <Image
           src="/images/mentorship/eight-steps/02.png"
@@ -115,8 +115,7 @@ export default function HorizontalScroll() {
           height={1920}
           style={{ position: "absolute", zIndex: "-2" }}
           className="horizontal-scroll-images image-2"
-          alt='meditation background image'
-
+          alt="meditation background image"
         />
         <Image
           src="/images/mentorship/eight-steps/03.png"
@@ -124,8 +123,7 @@ export default function HorizontalScroll() {
           height={1920}
           style={{ position: "absolute", zIndex: "-3" }}
           className="horizontal-scroll-images image-3"
-          alt='movement background image'
-
+          alt="movement background image"
         />
         <Image
           src="/images/mentorship/eight-steps/04.png"
@@ -133,8 +131,7 @@ export default function HorizontalScroll() {
           height={1920}
           style={{ position: "absolute", zIndex: "-4" }}
           className="horizontal-scroll-images image-4"
-          alt='mindset background image'
-
+          alt="mindset background image"
         />
         <Image
           src="/images/mentorship/eight-steps/05.png"
@@ -142,8 +139,7 @@ export default function HorizontalScroll() {
           height={1920}
           style={{ position: "absolute", zIndex: "-5" }}
           className="horizontal-scroll-images image-5"
-          alt='self-knowledge background image'
-
+          alt="self-knowledge background image"
         />
         <Image
           src="/images/mentorship/eight-steps/06.png"
@@ -151,8 +147,7 @@ export default function HorizontalScroll() {
           height={1920}
           style={{ position: "absolute", zIndex: "-6" }}
           className="horizontal-scroll-images image-6"
-          alt='self-talk background image'
-
+          alt="self-talk background image"
         />
         <Image
           src="/images/mentorship/eight-steps/07.png"
@@ -160,8 +155,7 @@ export default function HorizontalScroll() {
           height={1920}
           style={{ position: "absolute", zIndex: "-7" }}
           className="horizontal-scroll-images image-7"
-          alt='mindfulness background image'
-
+          alt="mindfulness background image"
         />
         <Image
           src="/images/mentorship/eight-steps/08.png"
@@ -169,14 +163,13 @@ export default function HorizontalScroll() {
           height={1920}
           style={{ position: "absolute", zIndex: "-8" }}
           className="horizontal-scroll-images image-8"
-          alt='the creative plan background image'
-
+          alt="the creative plan background image"
         />
       </div>
       <div className="horizontal-scroll-tracker">
         <div ref={contentRef} className="horizontal-scroll-content">
           <div
-            style={{ display: "flex", position: "relative" }}
+            style={{ display: "flex", position: "relative", gap: "4vw" }}
             className="horizontal-scrolltracker-container"
           >
             <HorizontalScrollTextBlock />

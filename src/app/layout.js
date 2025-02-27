@@ -5,7 +5,7 @@ import LenisProvider from "./components/LenisProvider";
 import { ViewTransitions } from "next-view-transitions";
 
 export const metadata = {
-  title: "Hummana",
+  title: "HUMMANA",
   description: "Retreats & Mentorships from Bali, Indonesia.",
 };
 

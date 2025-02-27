@@ -84,7 +84,6 @@ export default function BannerProducts({
             <div className="line">{subtitleLine2}</div>
           </h3>
           <div className="first-content__hero-inner">
-            <>{titleDescription}</>
             <PrimaryButton
               href={bannerLink}
               label={bannerLinkLabel}
@@ -92,6 +91,9 @@ export default function BannerProducts({
             />
           </div>
         </div>
+      </div>
+      <div className="first-content contenido-servicios">
+        <div className="first-content-container">{titleDescription}</div>
       </div>
       <div className="first-content contenido-servicios">
         <div className="first-content-container">

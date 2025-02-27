@@ -34,7 +34,6 @@ body {
     flex-direction: column;
     gap: 1vw;
     align-items: center;
-    padding-top: 25vh;
 }
 
 
@@ -86,8 +85,7 @@ h3 {
 
 .steps-texto {
     width: 33vw;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
     height: 100%;
 
 }
@@ -150,7 +148,6 @@ h3 {
 .image-fixed-wrapper {
     width: 100vw;
     height: 100vh;
-    background-color: red;
     position: sticky;
     top: 0;
 }
