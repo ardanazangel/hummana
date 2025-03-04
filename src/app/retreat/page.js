@@ -28,7 +28,7 @@ export default function Page() {
     {
       nombre: "María Mercedes",
       texto:
-        "Laura y Bali llegaron a mi vida en un momento de mucho dolor. Estaba sin trabajo, con una relación de pareja casi al final, sabiendo del cáncer de mi mamá y yo en crisis existencial total. Llegar a Bali fue muy especial desde el primer momento era todo perfecto al punto que ni lo creía. Fue una semana de muchas experiencias, de charlas, de aprendizaje y de mucha introspección. Bali me cambió por completo la vida. A mi regreso las cosas con mi esposo mejoraron, recibimos una oferta de trabajo muy interesante y ahora vivimos felices en una isla de sueño, mi mamá se curó de su cáncer y mi relación conmigo misma es la mejor que haya podido pensar. Al cambiar mi interior, mi exterior también se transformó. Gracias infinitas, Laura.",
+        "Laura y Bali llegaron a mi vida en un momento de mucho dolor. Estaba sin trabajo, con una relación de pareja casi al final, sabiendo del cáncer de mi mamá y yo en Crisis existencial total. Llegar a Bali fue muy especial desde el primer momento era todo perfecto al punto que ni lo creía. Fue una semana de muchas experiencias, de charlas, de aprendizaje y de mucha introspección. Bali me cambió por completo la vida. A mi regreso las cosas con mi esposo mejoraron, recibimos una oferta de trabajo muy interesante y ahora vivimos felices en una isla de sueño, mi mamá se curó de su cáncer y mi relación conmigo misma es la mejor que haya podido pensar. Al cambiar mi interior, mi exterior también se transformó. Gracias infinitas, Laura.",
       pais: "Estados Unidos",
       imagen: "/images/people/maria-mercedes.jpg",
     },
@@ -38,7 +38,7 @@ export default function Page() {
       <BannerProducts
         bannerImage={"/images/retreat/banner.png"}
         bannerLink={"/bro"}
-        bannerLink2={"/broski"}
+        bannerLink2={"/#"}
         bannerLinkLabel={"Come Play"}
         bannerLinkLabel2={"Play More"}
         title={"Retreat"}
@@ -52,15 +52,15 @@ export default function Page() {
         }
         titleDescription={
           <>
-            <h4 className="white-type uppercase">A transformative journey</h4>
+            <h3 className="white-type uppercase">A transformative journey</h3>
             <p className="white-type center-type">
               Fortalece la mente, mueve el cuerpo, conecta con el corazón.
             </p>
-            <h5 className="white-type uppercase">
+            <h4 className="white-type uppercase">
               <br />
               HUMMANA es más que un retiro.
               <br />
-            </h5>
+            </h4>
             <p className="white-type center-type">
                Es aventura, conexión y desarrollo personal en el pulmón de Bali,
               Indonesia. 
@@ -115,6 +115,7 @@ export default function Page() {
           testimonialImg={
             "/images/retreat/activities/ritual-de-los-cuatro-elementos.jpg"
           }
+          vimeoId={"1058963501"}
         />
         <ListBenefits />
         <section className="benefits__section">

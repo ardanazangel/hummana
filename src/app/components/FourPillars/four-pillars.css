@@ -1,0 +1,64 @@
+.four-pillars__wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.four-pillars__module {
+    flex: 1;
+    transition: all 0.8s ease;
+    ;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vw;
+    position: relative;
+}
+
+.four-pillars__module:hover {
+    flex: 2 !important;
+}
+
+.four-pillars__content {
+    position: absolute;
+    width: 32vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-out;
+    z-index: 2;
+    text-align: center;
+}
+
+.four-pillars__module:hover .four-pillars__content {
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+
+.four-pillars__content>* {
+    color: var(--light-color);
+}
+
+.four-pillars__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .8s ease;
+
+    * {
+        color: var(--light-color);
+    }
+
+}
+
+.four-pillars__module:hover .four-pillars__title {
+    top: 20%;
+
+}
+
+.four-pillars__module:hover .four-pillars__content {
+    opacity: 1;
+}

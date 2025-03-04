@@ -5,7 +5,7 @@ import "../Testimonials/testimonials.css";
 import Image from "next/image";
 import gsap from "gsap";
 
-export default function Testimonial({ testimonials = [] }) {
+export default function Testimonial({ testimonials = [], vimeoId }) {
   const [index, setIndex] = useState(0);
   const testimonialRef = useRef(null);
 
@@ -49,20 +49,21 @@ export default function Testimonial({ testimonials = [] }) {
     <section className="testimonials-total-wrapper">
       <div className="testimonial-video">
         <iframe
-          src="https://player.vimeo.com/video/1058963501?autoplay=1&loop=1&muted=1&background=1"
+          src={`https://player.vimeo.com/video/${vimeoId}?autoplay=1&loop=1&muted=1&background=1`}
           allow="autoplay; fullscreen"
           allowFullScreen
           frameBorder={0}
           title="Testimonial video"
           style={{
             position: "absolute",
-            top: 0,
-            left: 0,
+            top: "50%",
+            left: "50%",
             minWidth: "100%", // Proporción 9:16 en base a la altura
             minHeight: "100%", // Proporción 9:16 en base al ancho
             filter: "brightness(0.75)",
             pointerEvents: "none",
             aspectRatio: 1,
+            transform: "translate(-50%, -50%)",
           }}
         />
       </div>

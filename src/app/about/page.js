@@ -17,13 +17,17 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
           <h1>
             <div className="line">
               <span className="hero-content white-type">Un</span>
-              <span className="hero-content white-type">Viaje</span>
+              <span className="hero-content white-type middle-element">
+                Viaje
+              </span>
               <span className="hero-content white-type">De</span>
             </div>
 
             <div className="line">
               <span className="hero-content white-type">Fuera</span>
-              <span className="hero-content white-type">Hacia</span>
+              <span className="hero-content white-type middle-element">
+                Hacia
+              </span>
               <span className="hero-content white-type">Dentro</span>
             </div>
           </h1>
@@ -33,7 +37,7 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
       <section className="about-content-wrapper light-section">
         <div className="about-two-columns about-first-block">
           <div className="about-inner-six-columns">
-            <h2 className="black-type about-mini-title">(About)</h2>
+            <h3 className="black-type about-mini-title">(About)</h3>
           </div>
           <div className="about-inner-three-columns ">
             <div className="title-with-paragraph fill-two-columns">
@@ -110,7 +114,7 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
           </div>*/}
             <div
               className="title-with-paragraph third-block-content"
-              style={{ textAlign: "center" }}
+              style={{ textAlign: "center", width: "calc(100%/2.5)" }}
             >
               <AboutImage />
               <h2 className="black-type">

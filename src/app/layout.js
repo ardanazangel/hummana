@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body>
           <LenisProvider>
-            {/*<Grid></Grid>*/}
+            {/* <Grid></Grid> */}
             <Header />
             <div className="transition-wrapper">{children}</div>
           </LenisProvider>

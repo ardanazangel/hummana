@@ -20,7 +20,7 @@ export default function TransitionLink2({ href, Label }) {
         },
       ],
       {
-        duration: 1000,
+        duration: 600,
         fill: "forwards",
         pseudoElement: "::view-transition-old(root)",
         easing: "cubic-bezier(0.79, 0.14, 0.15, 0.86)",
@@ -39,14 +39,14 @@ export default function TransitionLink2({ href, Label }) {
         },
       ],
       {
-        duration: 1000,
-        delay: 1000,
+        duration: 600,
+        delay: 600,
         fill: "forwards",
         pseudoElement: "::view-transition-new(root)",
         easing: "cubic-bezier(0.79, 0.14, 0.15, 0.86)",
       }
     );
-    lenis.scrollTo(0, { inmediate: true });
+    lenis.scrollTo(0, { inmediate: true, duration: 0 });
   };
   return (
     <a

@@ -1,9 +1,14 @@
-import HorizontalScroll from "../components/HorizontalScroll";
 import "../products.css";
 import BannerProducts from "../components/BannerProducts";
 import YouBelongHere from "../components/BelongHere";
 import Footer from "../components/Footer";
 import Testimonial from "../components/Testimonials";
+import ValueMentorship from "../components/ValueMentorship";
+// import FourPillars from "../components/FourPillars";
+import Benefits from "../components/Benefits";
+import OneOnOne from "../components/OneOnOne";
+import TailoringMent from "../components/TailoringMent";
+import GridSection from "../components/GridSection/GridSection";
 
 export default function Page() {
   const testimonialsData = [
@@ -34,29 +39,29 @@ export default function Page() {
       <BannerProducts
         bannerImage={"/images/mentorship/banner4.jpg"}
         bannerLink={"/hello"}
-        bannerLink2={"/broski"}
+        bannerLink2={"/#"}
         bannerLinkLabel2={"Come Create"}
         bannerLinkLabel={"Come Create"}
         title={"Mentorship"}
         subtitleLine1={
           <>
-            <span>Rewire</span>
-            <span className="middle-element">Your</span>
-            <span>Mind</span>
-          </>
-        }
-        subtitleLine2={
-          <>
-            <span>Reshape</span>
-            <span className="middle-element">Your</span>
-            <span>Life</span>
+            <span>Ignite</span>
+            <span>Your</span>
+
+            <span>Natural</span>
+            <span>Potential</span>
           </>
         }
         titleDescription={
-          <h3 className="white-type center-type">
-            Inmersión «one on one» para alcanzar la plenitud en los pilares
-            esenciales de la vida.
-          </h3>
+          <>
+            <h3 className="white-type center-type">
+              Rewire your mind, reshape your life
+            </h3>
+            <p className="white-type center-type">
+              HUMMANA mentorship es una inmersión «one on one» para alcanzar la
+              plenitud en los pilares esenciales de la vida.
+            </p>
+          </>
         }
         secondTitle={"Desarrollate"}
         secondDescription={
@@ -106,7 +111,7 @@ export default function Page() {
         </div>
         <div className="one-module__wrapper">
           <div className="one-module__content">
-            <h2>Being Reshaped</h2>
+            <h2>Being in full power</h2>
             <h3>The past</h3>
             <p>
               La mayoría de personas viven entre dos planos imaginarios: el
@@ -123,7 +128,8 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <HorizontalScroll />
+      {/* <FourPillars /> */}
+      <GridSection />
       <YouBelongHere
         src={"/images/mentorship/youbelonghere.png"}
         description={
@@ -138,7 +144,12 @@ export default function Page() {
           </>
         }
       />
-      <Testimonial testimonials={testimonialsData} />
+      <Testimonial testimonials={testimonialsData} vimeoId={"1061215683"} />
+      <TailoringMent />
+      <OneOnOne />
+      <Benefits />
+      <ValueMentorship />
+
       <Footer
         fraseFooter={
           <h4 className="center-type">Master your mind, Change your life.</h4>

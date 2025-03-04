@@ -131,7 +131,7 @@ h1 {
   color: var(--light-color);
   border: 1px solid var(--light-color);
   width: fit-content;
-  padding: 0.6vw 1vw;
+  padding: 0.5vw 1vw;
 }
 
 .secondary-button.black {
@@ -664,7 +664,7 @@ p {
 }
 
 .benefits__section {
-  padding: 10vw 0 4vw;
+  padding: 10vw 0 10vw;
   text-align: center;
 }
 
