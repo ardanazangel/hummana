@@ -163,3 +163,11 @@ h3 {
     justify-content: center;
     gap: .5vw;
 }
+
+@media (max-width:600px) {
+    .first-content-container:first-child {
+        width: 75%;
+        gap: 3vw;
+    }
+
+}

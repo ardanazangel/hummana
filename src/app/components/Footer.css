@@ -77,3 +77,20 @@
     left: 50%;
     transform: translate(-50%, 0);
 }
+
+@media (max-width: 600px) {
+    .footer-section {
+        height: 50dvh;
+    }
+
+    .logo-wrapper-footer {
+        width: 75%;
+    }
+
+    .footer-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

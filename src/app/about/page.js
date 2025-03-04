@@ -101,7 +101,6 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
               src="/images/surf.png"
               width={1920}
               height={1080}
-              style={{ background: "red" }}
               alt="Laura Vela surfeando"
             />
           </div>
@@ -109,12 +108,9 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
 
         <div className="about-principal-three-columns about-third-block">
           <div className="fill-center-column">
-            {/*          <div className="img about-mini-image">
-            <img />
-          </div>*/}
             <div
               className="title-with-paragraph third-block-content"
-              style={{ textAlign: "center", width: "calc(100%/2.5)" }}
+              style={{ textAlign: "center" }}
             >
               <AboutImage />
               <h2 className="black-type">

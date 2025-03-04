@@ -62,8 +62,8 @@ export default function AboutImage() {
   return (
     <div
       ref={containerRef}
+      className="changing-img"
       style={{
-        width: "15vw",
         aspectRatio: "3/4",
         position: "relative",
         marginBottom: "clamp(3rem, 2.286rem + 1.905vw, 4rem)",

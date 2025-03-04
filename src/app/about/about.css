@@ -59,15 +59,14 @@
 }
 
 .about-first-block {
-    padding-top: clamp(4rem, 1.307vw + 3.49rem, 6rem);
-    padding-bottom: clamp(6rem, 3.922vw + 4.471rem, 12rem);
+    padding: 10vw 0;
 
 }
 
 .title-with-paragraph {
     display: flex;
     flex-direction: column;
-    gap: clamp(1.5rem, 0.327vw + 1.373rem, 2rem);
+    gap: 2vw;
     align-items: center;
     width: calc(100%/1.5);
 }
@@ -112,7 +111,47 @@
 
 .about-third-block {
     min-height: 100vh;
-    padding-top: clamp(8.25rem, 5.393rem + 7.619vw, 12.25rem);
-    padding-bottom: clamp(6rem, 3.922vw + 4.471rem, 12rem);
+    padding: 10vw 0;
+
+}
+
+.changing-img {
+    width: 15vw;
+}
+
+@media (max-width:600px) {
+    .page-title-wrapper {
+        width: 75%;
+    }
+
+    .about-two-columns {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .title-with-paragraph {
+        width: 85%;
+        gap: 6vw;
+    }
+
+    .about-first-block {
+        padding: 20vw 0;
+    }
+
+    .about-inner-six-columns {
+        padding: 0 0 20vw;
+    }
+
+    .about-inner-six-columns {
+        justify-content: center;
+
+    }
+
+    .about-third-block {
+        padding: 20vw 0;
+    }
+
+    .changing-img {
+        width: 40vw;
+    }
 
 }

@@ -70,3 +70,24 @@
     transform: translate(-50%, -50%);
     width: 75%;
 }
+
+@media (max-width: 600px) {
+
+    .list-content {
+        gap: 6vw;
+    }
+
+    .benefitslist-wrapper {
+        flex-direction: column-reverse;
+
+    }
+
+    .list {
+        width: 80vw;
+    }
+
+    .list-wrapper {
+        min-height: 90vh;
+        padding: 20vw 0;
+    }
+}

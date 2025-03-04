@@ -71,3 +71,41 @@
     display: flex;
     gap: 1vw;
 }
+
+@media (max-width: 600px) {
+
+    .testimonials-total-wrapper {
+        flex-direction: column;
+    }
+
+    .testimonial-video {
+        min-height: 50dvh;
+        aspect-ratio: 3/4;
+    }
+
+    .testimonial-img {
+        width: 12.5vw;
+    }
+
+    .testimonial-content {
+        gap: 3vw;
+    }
+
+    .testimonials-text-content {
+        max-width: 75vw;
+        gap: 1.5vw;
+    }
+
+    .testimonial-content-wrapper {
+        min-height: 85dvh;
+        gap: 6vw;
+        padding: 25vw 0;
+    }
+
+    .testimonials-buttons {
+        position: absolute;
+        bottom: 8dvh;
+        gap: 3vw;
+
+    }
+}

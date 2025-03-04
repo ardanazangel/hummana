@@ -149,7 +149,7 @@ h1 {
 h2 {
   font-family: "Andale";
   font-weight: 400;
-  font-size: 3.125vw;
+  font-size: 2.80vw;
   line-height: 1.1em;
   letter-spacing: -0.075em;
   text-transform: uppercase;
@@ -492,18 +492,20 @@ p {
   transition: all 1s cubic-bezier(0.77, 0, 0.18, 1);
 }
 
-.module-content:hover {
-  gap: 10vw;
-}
+@media (min-width: 601px) {
+  .module-content:hover {
+    gap: 10vw;
+  }
 
-.module-content:hover .text-module__description {
-  opacity: 1;
-  transform: translateY(-10%);
-}
+  .module-content:hover .text-module__description {
+    opacity: 1;
+    transform: translateY(-10%);
+  }
 
-.module-content:hover .text-module__title {
-  transform: translateY(0%);
-  opacity: 1;
+  .module-content:hover .text-module__title {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 .retreat-activities-wrapper {
@@ -753,11 +755,19 @@ p {
   }
 
   .part-wrapper {
-    height: 50d vh;
+    height: 50dvh;
   }
 
   h2 {
     font-size: 8vw;
+  }
+
+  h3 {
+    font-size: 5.5vw;
+  }
+
+  h4 {
+    font-size: 3vw;
   }
 
   p {
@@ -793,4 +803,60 @@ p {
   .small-title {
     display: none;
   }
+
+  .tag {
+    font-size: 2vw;
+  }
+
+  .secondary-button {
+    padding: 1.5vw 3vw;
+    margin-top: 3vw;
+  }
+
+  .value-content {
+    width: 75% !important;
+  }
+
+  .modulo-texto {
+    flex-direction: column;
+    gap: 9vw;
+    padding: 20vw 0;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .module-content {
+    gap: 3vw;
+    width: 75%;
+  }
+
+  .text-module__description {
+    opacity: 1;
+  }
+
+  .text-module__title {
+    opacity: 1;
+  }
+
+
+  .module-content:hover {
+    gap: 3vw;
+  }
+
+  .module-content {
+    height: auto;
+  }
+
+  .circle__wrapper {
+    display: none;
+  }
+
+  .modulo-texto__frasecilla {
+    padding: 0 6VW 6vw;
+  }
+
+  #hero-section {
+    height: 300dvh;
+  }
+
 }

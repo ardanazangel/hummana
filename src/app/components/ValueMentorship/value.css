@@ -35,3 +35,15 @@
     bottom: 2vw;
     width: calc(100%/3) !important;
 }
+
+@media (max-width: 600px) {
+
+    .youbelonghere-description {
+        width: 75%;
+    }
+
+    .value-content {
+        width: 75%;
+        gap: 6vw;
+    }
+}
