@@ -1,5 +1,5 @@
 .one-on-one__section {
-    max-height: 100vh;
+    height: 100vh;
     overflow: hidden;
     position: relative;
 }
@@ -28,4 +28,16 @@
     flex-direction: column;
     width: calc(100%/3);
     gap: .5vw;
+}
+
+@media (max-width: 700px) {
+    .one-on-one__section {
+        height: 60dvh;
+    }
+
+    .one-on-one__content {
+        width: 75%;
+        gap: 1.5vw;
+    }
+
 }

@@ -126,6 +126,7 @@ export default function Values() {
       ease: "linear",
     });
   }, []);
+
   return (
     <section className="values-section">
       <div className="section-central-tracker">

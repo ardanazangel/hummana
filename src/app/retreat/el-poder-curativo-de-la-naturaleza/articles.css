@@ -1,0 +1,36 @@
+.article__section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.video__wrapper {
+    width: calc(100%/1.5);
+    aspect-ratio: 16/9;
+    background-color: #333;
+    margin: 10vw 0 5vw;
+}
+
+.article__content {
+    width: calc(100%/2.5);
+
+    h2,
+    h3,
+    h4,
+    h5 {
+        text-wrap: balance;
+    }
+}
+
+@media (max-width: 700px) {
+    .article__content {
+        width: 85%;
+    }
+
+    .video__wrapper {
+        margin-bottom: 10vw;
+        margin-top: 20vw;
+        width: 85%;
+    }
+}

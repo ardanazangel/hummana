@@ -13,17 +13,17 @@ export default function Footer({ fraseFooter }) {
           <LogoDark />
           <ul className="footer-menu">
             <li>
-              <TransitionLink href={"/hello"}>
+              <TransitionLink href={"/retreat"}>
                 <h3>Retreat</h3>
               </TransitionLink>
             </li>
-            <li className="middle-element">
-              <TransitionLink href={"/hello"}>
+            <li>
+              <TransitionLink href={"/about"}>
                 <h3>About</h3>
               </TransitionLink>
             </li>
             <li>
-              <TransitionLink href={"/hello"}>
+              <TransitionLink href={"/mentorship"}>
                 <h3>Mentorship</h3>
               </TransitionLink>
             </li>

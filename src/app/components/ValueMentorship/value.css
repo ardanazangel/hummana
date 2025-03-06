@@ -33,10 +33,10 @@
 .value-letra-pequeña {
     position: absolute;
     bottom: 2vw;
-    width: calc(100%/3) !important;
+    width: calc(100%/3);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     .youbelonghere-description {
         width: 75%;
@@ -45,5 +45,9 @@
     .value-content {
         width: 75%;
         gap: 6vw;
+    }
+
+    .value-letra-pequeña {
+        width: 75%;
     }
 }

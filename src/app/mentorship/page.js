@@ -54,7 +54,10 @@ export default function Page() {
         }
         titleDescription={
           <>
-            <h3 className="white-type center-type">
+            <h3
+              className="white-type center-type"
+              style={{ textWrap: "balance" }}
+            >
               Rewire your mind, reshape your life
             </h3>
             <p className="white-type center-type">

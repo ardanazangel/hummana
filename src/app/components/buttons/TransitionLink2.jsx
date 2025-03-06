@@ -1,8 +1,10 @@
+"use client";
+
 import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import { useLenis } from "@studio-freight/react-lenis";
 
-export default function TransitionLink2({ href, Label }) {
+export default function TransitionLink2({ href, children }) {
   const router = useTransitionRouter();
   const pathname = usePathname();
   const lenis = useLenis();
@@ -55,14 +57,14 @@ export default function TransitionLink2({ href, Label }) {
       scroll={"0"}
       onClick={(e) => {
         e.preventDefault();
-        if (pathname !== href) {
-          router.push(`${href}`, {
-            onTransitionReady: pageAnimation,
-          });
-        }
+        // Ensure the href is treated as an absolute path
+        const absoluteHref = new URL(href, window.location.origin).pathname;
+        router.push(absoluteHref, {
+          onTransitionReady: pageAnimation,
+        });
       }}
     >
-      {Label}
+      {children}
     </a>
   );
 }

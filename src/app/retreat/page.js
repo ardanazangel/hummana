@@ -37,7 +37,7 @@ export default function Page() {
     <>
       <BannerProducts
         bannerImage={"/images/retreat/banner.png"}
-        bannerLink={"/bro"}
+        bannerLink={"/retreat/el-poder-curativo-de-la-naturaleza"}
         bannerLink2={"/#"}
         bannerLinkLabel={"Come Play"}
         bannerLinkLabel2={"Play More"}

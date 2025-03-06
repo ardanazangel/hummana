@@ -34,7 +34,10 @@ export default function ActividadesRetreat() {
   const textRef = useRef(null);
   // Set initial activity to the first item of MIND category
   const [activeActivity, setActiveActivity] = useState(experiences.MIND[0]);
-  const [activityText, setActivityText] = useState(activityDescriptions[experiences.MIND[0]]);
+  const [activityText, setActivityText] = useState(
+    activityDescriptions[experiences.MIND[0]]
+  );
+
   const handleImageChange = (activity) => {
     if (!imageRefs.current[activity]) return;
 
@@ -84,7 +87,7 @@ export default function ActividadesRetreat() {
             </div>
           ))
         )}
-        
+
         {activityText && (
           <div className="activity-overlay" ref={textRef}>
             {Object.entries(experiences).map(
@@ -140,7 +143,18 @@ export default function ActividadesRetreat() {
                   }`}
                   onMouseEnter={() => handleImageChange(activity)}
                 >
-                  <h3 className="activitie white-type">{activity}</h3>
+                  <h3 className="activitie white-type center-type">
+                    {activity}
+                  </h3>
+                  <div className="activities__mobile-descriptions">
+                    <p className="white-type center-type">
+                      {activityDescriptions[activity][0]}
+                    </p>
+                    <h4 className="white-type uppercase">Skill unlocked</h4>
+                    <p className="white-type center-type">
+                      {activityDescriptions[activity][1]}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ul>

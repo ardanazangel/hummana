@@ -217,7 +217,7 @@ export default function ListBenefits() {
           </p>
         </div>
       </div>
-      <div className="img" style={{ height: "65vw" }}>
+      <div className="img tailoring-img">
         <Image
           width={720}
           height={1280}

@@ -34,3 +34,26 @@
     flex-direction: column;
     gap: .5vw;
 }
+
+@media (max-width: 700px) {
+
+    .tailoring__img {
+        height: 60dvh;
+    }
+
+    .tailoring__section {
+        flex-direction: column-reverse;
+    }
+
+    .tailoring__content {
+        padding: 20vw 0;
+        gap: 3vw;
+        width: 75%;
+    }
+
+    .tailoring__content-module {
+        gap: 1.5vw;
+    }
+
+
+}

@@ -64,25 +64,16 @@ export default function Header() {
     >
       <ul>
         <li className="white-type nav-element darken">
-          <TransitionLink2 href={"/"} Label={"Hummana"}></TransitionLink2>
+          <TransitionLink2 href={"/"}>Hummana</TransitionLink2>
         </li>
         <li className="white-type nav-element center">
           <div className="inner-pages-wrapper darken">
-            <TransitionLink2
-              href={"retreat"}
-              Label={"Retreat"}
-              className="darken"
-            ></TransitionLink2>
-            <TransitionLink2
-              href={"mentorship"}
-              Label={"Mentorship"}
-            ></TransitionLink2>
+            <TransitionLink2 href={"retreat"}>Retreat</TransitionLink2>
+            <TransitionLink2 href={"mentorship"}>Mentorship</TransitionLink2>
           </div>
         </li>
         <li className="white-type nav-element darken">
-          <TransitionLink className="darken" href="/about" scroll={true}>
-            About
-          </TransitionLink>
+          <TransitionLink2 href={"about"}>About</TransitionLink2>
         </li>
       </ul>
     </nav>

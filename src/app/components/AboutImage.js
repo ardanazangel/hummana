@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const images = [
   "/images/about-principal.png",
@@ -70,7 +71,9 @@ export default function AboutImage() {
       }}
     >
       {images.map((src, index) => (
-        <img
+        <Image
+          width={300}
+          height={600}
           key={index}
           src={src}
           alt="Overlay Image"

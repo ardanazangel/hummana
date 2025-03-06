@@ -78,9 +78,18 @@
     transform: translate(-50%, 0);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+
+    .frase-diferente__footer {
+        top: 6vw;
+    }
+
+    .footer-contacto {
+        padding: 6vw;
+    }
+
     .footer-section {
-        height: 50dvh;
+        height: 60dvh;
     }
 
     .logo-wrapper-footer {

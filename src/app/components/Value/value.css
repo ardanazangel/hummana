@@ -33,5 +33,11 @@
 .value-letra-pequeña {
     position: absolute;
     bottom: 2vw;
-    width: calc(100%/3) !important;
+    width: calc(100%/3);
+}
+
+@media (max-width: 700px) {
+    .value-letra-pequeña {
+        width: 75%;
+    }
 }

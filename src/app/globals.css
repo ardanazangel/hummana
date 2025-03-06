@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+.loader {
+  width: 100%;
+  height: 100dvh;
+  position: fixed;
+  background-color: var(--light-color);
+  opacity: 1;
+  z-index: 999;
+  top: 0;
+}
+
 ::view-transition-new(root) {
   animation: none;
   opacity: 0;
@@ -132,6 +142,7 @@ h1 {
   border: 1px solid var(--light-color);
   width: fit-content;
   padding: 0.5vw 1vw;
+  display: block;
 }
 
 .secondary-button.black {
@@ -492,7 +503,12 @@ p {
   transition: all 1s cubic-bezier(0.77, 0, 0.18, 1);
 }
 
-@media (min-width: 601px) {
+.activities__mobile-descriptions {
+  display: none;
+}
+
+@media (min-width: 700px) {
+
   .module-content:hover {
     gap: 10vw;
   }
@@ -723,7 +739,49 @@ p {
   text-transform: uppercase;
 }
 
-@media (max-width: 600px) {
+.tailoring-img {
+  height: 65vw;
+}
+
+@media (max-width: 700px) {
+
+  .img-activity-wrapper {
+    display: none;
+  }
+
+  .activities-list {
+    gap: .5vw;
+  }
+
+  .activities__mobile-descriptions {
+    display: flex;
+    height: 0px;
+    transition: height .4s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 3vw;
+    gap: 1.5vw;
+    opacity: 0;
+    padding: 0;
+    transform-origin: center;
+  }
+
+  .activities-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .activities-item.active {
+    .activities__mobile-descriptions {
+      height: 70vw;
+      opacity: .7;
+    }
+  }
+
   .hero-wrapper {
     display: flex;
     align-items: center;
@@ -731,7 +789,7 @@ p {
   }
 
   .hero-content-wrapper {
-    width: calc(100vw / 1.5);
+    width: 75%;
     gap: 2vw;
   }
 
@@ -767,7 +825,11 @@ p {
   }
 
   h4 {
-    font-size: 3vw;
+    font-size: 4.25vw;
+  }
+
+  h5 {
+    font-size: 3.75vw;
   }
 
   p {
@@ -858,5 +920,75 @@ p {
   #hero-section {
     height: 300dvh;
   }
+
+  .accomodation-section {
+    height: 300dvh;
+  }
+
+  .accomodation-text-wrapper {
+    position: absolute;
+    z-index: 9999;
+
+    * {
+      color: var(--light-color);
+    }
+  }
+
+  .accomodation-content {
+    width: auto;
+  }
+
+  .benefits__section {
+    padding: 20vw 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+  }
+
+  .benefits__wrapper {
+    flex-direction: column;
+    gap: 1.5vw;
+    width: 85%;
+  }
+
+
+
+  .benefits__module {
+    gap: 1.5vw;
+  }
+
+  .tailoring-img {
+    min-height: 50dvh;
+  }
+
+  .retreat-activities-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .img-activity-wrapper {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .activities-list-wrapper {
+    padding: 20vw 0;
+    width: 90%;
+  }
+
+  .activity-overlay {
+    padding: 20vw 0;
+    position: relative;
+    height: 100%;
+    width: 90%;
+  }
+
+  .accomodation-scroller-img {
+    filter: brightness(.75);
+  }
+
 
 }

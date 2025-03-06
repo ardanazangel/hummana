@@ -164,10 +164,17 @@ h3 {
     gap: .5vw;
 }
 
-@media (max-width:600px) {
+@media (max-width:700px) {
     .first-content-container:first-child {
-        width: 75%;
+        width: 85%;
         gap: 3vw;
     }
 
+    h1 {
+        font-size: 9vw;
+    }
+
+    .secondary-button {
+        margin-top: 3vw;
+    }
 }

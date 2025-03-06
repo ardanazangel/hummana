@@ -36,7 +36,7 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
       </section>
       <section className="about-content-wrapper light-section">
         <div className="about-two-columns about-first-block">
-          <div className="about-inner-six-columns">
+          <div className="about-mini-title__wrapper">
             <h3 className="black-type about-mini-title">(About)</h3>
           </div>
           <div className="about-inner-three-columns ">
@@ -63,7 +63,10 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
         </div>
 
         <div className="about-two-columns about-second-block">
-          <div className="about-inner-six-columns">
+          <div
+            className="about-inner-six-columns"
+            style={{ background: "rgb(208 215 226)" }}
+          >
             <div className="title-with-paragraph fill-four-center-columns second-block-content">
               <h2 className="black-type">
                 LA FELICIDAD ES EL DETONANTE PARA REINVENTARTE
