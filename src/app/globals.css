@@ -6,11 +6,11 @@
 
 .loader {
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   position: fixed;
-  background-color: var(--light-color);
+  background-color: var(--ligth-color);
   opacity: 1;
-  z-index: 999;
+  z-index: 9999999999999999999999999999;
   top: 0;
 }
 
@@ -365,6 +365,8 @@ p {
   z-index: 9999999999;
   position: absolute;
 }
+
+
 
 /*Mentorships vs Retreats */
 
@@ -743,7 +745,19 @@ p {
   height: 65vw;
 }
 
+.underline {
+  width: 0%;
+  height: .01vw;
+  background-color: var(--light-color);
+  transition: width 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.nav-item:hover .underline {
+  width: 100%;
+}
+
 @media (max-width: 700px) {
+
 
   .img-activity-wrapper {
     display: none;
@@ -881,7 +895,7 @@ p {
 
   .modulo-texto {
     flex-direction: column;
-    gap: 9vw;
+    gap: 6vw;
     padding: 20vw 0;
     justify-items: center;
     align-items: center;
@@ -988,6 +1002,22 @@ p {
 
   .accomodation-scroller-img {
     filter: brightness(.75);
+  }
+
+  .text-module__section {
+    flex-direction: column;
+    padding: 20vw 0;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+  }
+
+  .one-module__wrapper {
+    width: 85%;
+  }
+
+  .underline {
+    display: none;
   }
 
 

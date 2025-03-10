@@ -32,6 +32,17 @@
 .benefits-mentorship__content-wrapper {
     display: flex;
     width: 100%;
-    gap: 4vw;
     padding: 0 4vw;
+}
+
+@media (max-width: 700px) {
+    .benefits-mentorship__section {
+        padding: 20vw 0;
+    }
+
+    .benefits-mentorship__content-wrapper {
+        flex-direction: column;
+        gap: 0vw;
+        padding: 0 0vw;
+    }
 }

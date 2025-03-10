@@ -13,8 +13,9 @@ button {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     min-height: 50vw;
-    background-color: var(--dark-color);
     position: relative;
+    cursor: default;
+    width: 100%;
 
     * {
         color: var(--light-color);
@@ -29,8 +30,7 @@ button {
     flex-direction: column;
     position: relative;
     transition: background-color .2s cubic-bezier(0.77, 0, 0.175, 1);
-    aspect-ratio: 1/1.25;
-    cursor: pointer;
+    aspect-ratio: 1;
 
     * {
         text-align: center;
@@ -46,29 +46,25 @@ button {
 }
 
 .grid-card__wrapper.active .grid-card__info * {
-    color: var(--dark-color);
+    color: var(--light-color);
 }
 
 .grid-card__wrapper.active .grid-card__title {
-    color: var(--dark-color);
-    top: 4vw;
+    color: var(--light-color);
 }
 
 .grid-card__wrapper:hover .grid-card__info {
     opacity: 1;
+    bottom: 10vw;
 
     * {
-        color: var(--dark-color);
+        color: var(--light-color);
     }
 }
 
 .grid-card__wrapper:hover .grid-card__title {
-    color: var(--dark-color);
-    top: 4vw;
-}
-
-.grid-card__wrapper:hover {
-    background-color: var(--light-color);
+    color: var(--light-color);
+    top: 6vw;
 }
 
 .grid-card__info {
@@ -142,4 +138,25 @@ button {
     position: absolute;
     top: 1vw;
     right: 1vw;
+}
+
+.grid__section-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid__title-wrapper {
+    padding-top: 10vw;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    width: calc(100%/3);
+
+    * {
+        text-align: center;
+    }
 }

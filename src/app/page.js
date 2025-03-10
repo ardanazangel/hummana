@@ -11,13 +11,18 @@ import Loader from "./components/Loader";
 export default function Home() {
   return (
     <>
-      {/* <Loader /> */}
-
       <div id="total-wrapper">
         <Hero />
         <MentorshipsRetreats />
         <Values />
-        <Footer />
+        <Footer
+          fraseFooter={
+            <h4 className="center-type">
+              The quality of your mind <br />
+              determines the quality of your life.
+            </h4>
+          }
+        />
       </div>
     </>
   );

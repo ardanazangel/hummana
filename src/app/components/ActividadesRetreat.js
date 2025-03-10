@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import activityDescriptions from "./activityDescriptions.json"; // Importa el archivo JSON
@@ -32,12 +32,14 @@ export default function ActividadesRetreat() {
 
   const imageRefs = useRef({});
   const textRef = useRef(null);
-  // Set initial activity to the first item of MIND category
-  const [activeActivity, setActiveActivity] = useState(experiences.MIND[0]);
-  const [activityText, setActivityText] = useState(
-    activityDescriptions[experiences.MIND[0]]
+  // Determine initial state based on screen width
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 700;
+  const [activeActivity, setActiveActivity] = useState(
+    isMobile ? false : experiences.MIND[0]
   );
-
+  const [activityText, setActivityText] = useState(
+    isMobile ? null : activityDescriptions[experiences.MIND[0]]
+  );
   const handleImageChange = (activity) => {
     if (!imageRefs.current[activity]) return;
 

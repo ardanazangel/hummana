@@ -4,7 +4,8 @@ import YouBelongHere from "../components/BelongHere";
 import Footer from "../components/Footer";
 import Testimonial from "../components/Testimonials";
 import ValueMentorship from "../components/ValueMentorship";
-// import FourPillars from "../components/FourPillars";
+import FourPillars from "../components/FourPillars";
+import FourPillarsFlex from "../components/FourPillarsFlex";
 import Benefits from "../components/Benefits";
 import OneOnOne from "../components/OneOnOne";
 import TailoringMent from "../components/TailoringMent";
@@ -38,7 +39,7 @@ export default function Page() {
     <>
       <BannerProducts
         bannerImage={"/images/mentorship/banner4.jpg"}
-        bannerLink={"/hello"}
+        bannerLink={"/#"}
         bannerLink2={"/#"}
         bannerLinkLabel2={"Come Create"}
         bannerLinkLabel={"Come Create"}
@@ -132,6 +133,7 @@ export default function Page() {
         </div>
       </section>
       {/* <FourPillars /> */}
+      <FourPillarsFlex />
       <GridSection />
       <YouBelongHere
         src={"/images/mentorship/youbelonghere.png"}

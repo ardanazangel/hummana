@@ -1,0 +1,112 @@
+#four-pillars-flex__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3vw;
+    cursor: default;
+
+}
+
+#four-pillars-flex__title-wrapper {
+    width: calc(100% /3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+}
+
+.four-pillars-flex__module {
+    min-height: 40vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw;
+    text-align: center;
+    flex: 1;
+    transition: flex 0.4s ease-in-out;
+    background-color: var(--dark-color);
+    /* Add transition for smooth effect */
+}
+
+/* Add hover effect to make the module slightly wider */
+.four-pillars-flex__module:hover {
+    flex: 2;
+    /* Increase flex value to make it take more space */
+    z-index: 1;
+
+    #four-pillars-flex__module__img {
+        filter: brightness(.5);
+    }
+
+    .module-description {
+        height: 10vw;
+        overflow: visible;
+        opacity: 1;
+    }
+
+}
+
+#four-pillars-flex__content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#four-pillars-flex__module__img {
+    position: absolute;
+    transition: filter .4s ease-in-out;
+
+}
+
+.four-pillars-flex__module__content {
+    width: 20vw;
+    position: absolute;
+
+    * {
+        color: var(--light-color);
+    }
+
+}
+
+.module-description {
+    height: 0vw;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    padding: .5vw 0 0 0;
+}
+
+@media (max-width: 700px) {
+    #four-pillars-flex__section {
+        gap: 6vw;
+
+        img {
+            filter: brightness(.5);
+        }
+    }
+
+    .module-description {
+        padding-top: 1.5vw;
+        height: auto;
+        opacity: 1;
+    }
+
+    #four-pillars-flex__title-wrapper {
+        width: 85%;
+        gap: 1.5vw;
+    }
+
+    #four-pillars-flex__content {
+        flex-direction: column;
+    }
+
+    .four-pillars-flex__module__content {
+        width: 85%;
+    }
+
+    .four-pillars-flex__module {
+        min-height: 100vw;
+    }
+}

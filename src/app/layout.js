@@ -1,8 +1,8 @@
 import "./globals.css";
-import Grid from "./components/Grid";
 import Header from "./components/Header";
 import LenisProvider from "./components/LenisProvider";
 import { ViewTransitions } from "next-view-transitions";
+import Loader from "./components/Loader";
 
 export const metadata = {
   title: "HUMMANA",
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body>
           <LenisProvider>
-            {/* <Grid></Grid> */}
+            <Loader />
             <Header />
             <div className="transition-wrapper">{children}</div>
           </LenisProvider>

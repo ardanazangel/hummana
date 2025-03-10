@@ -11,13 +11,6 @@ export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isPlaceholderVisible, setIsPlaceholderVisible] = useState(true);
 
-  const handleLoad = () => {
-    setIsLoaded(true);
-    setTimeout(() => {
-      setIsPlaceholderVisible(false); // Ensure placeholder is hidden after video loads
-    }, 10000);
-  };
-
   useEffect(() => {
     // Mostrar el placeholder por un tiempo determinado antes de que se cargue el video
     const timeoutId = setTimeout(() => {
@@ -65,6 +58,10 @@ export default function Hero() {
         start: "75% 20%", // Inicia cuando la parte superior de .hero-section alcanza la parte superior del viewport
         end: "95% 75%", // Termina cuando el scroll avanza el equivalente a 100vh
       },
+    });
+
+    gsap.set(".scroller-wrapper", {
+      opacity: 0,
     });
 
     scrollerAppearTl.fromTo(
@@ -188,22 +185,20 @@ export default function Hero() {
             overflow: "hidden",
           }}
         >
-          {isPlaceholderVisible && (
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                background: "url('/images/thumb.jpg') center/cover no-repeat", // Imagen de carga
-                zIndex: 0,
-                opacity: 1,
-                filter: "brightness(00.75)",
-              }}
-              className="placeholder"
-            ></div>
-          )}
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "url('/images/thumb.jpg') center/cover no-repeat", // Imagen de carga
+              zIndex: 0,
+              opacity: 1,
+              filter: "brightness(00.75)",
+            }}
+            className="placeholder"
+          ></div>
           <iframe
             src="https://player.vimeo.com/video/1052998618?autoplay=1&loop=1&muted=1&background=1"
             frameBorder="0"
@@ -214,6 +209,7 @@ export default function Hero() {
               position: "absolute",
               top: 0,
               left: 0,
+              opacity: 0,
               width: "100vw",
               height: "56.25vw",
               minHeight: "100vh",
@@ -221,7 +217,6 @@ export default function Hero() {
               filter: "brightness(00.75)",
             }}
             title="background video hero"
-            onLoad={handleLoad}
           ></iframe>
         </div>
         <div className="hero-section ">
@@ -237,7 +232,7 @@ export default function Hero() {
             </ul>
           </div>
 
-          <div className="scroller-wrapper">
+          <div className="scroller-wrapper" style={{ opacity: "0" }}>
             <div className="scroller-tracker-wrapper">
               <div className="scroller-tracker">
                 <div className="spacer"></div>

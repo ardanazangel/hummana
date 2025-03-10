@@ -1,0 +1,14 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.loader__logo-wrapper {
+    width: calc(100% / 6);
+
+    svg {
+        width: 100%;
+    }
+}

@@ -80,9 +80,12 @@
         gap: 6vw;
     }
 
+    .description {
+        width: 100%;
+    }
+
     .benefitslist-wrapper {
         flex-direction: column-reverse;
-
     }
 
     .list {
