@@ -51,8 +51,8 @@ export default function MentorshipsRetreats() {
                 <p className="small-title">RETREATS</p>
 
                 <p className="low-opacity">
-                  Una mentoría revolucionaria «one on one» para alcanzar la
-                  plenitud en los pilares esenciales de la vida.
+                  Es más que un retiro. Es aventura, conexión y desarrollo
+                  personal en el pulmón de Bali, Indonesia.
                 </p>
                 <button className="primary-button">COME PLAY</button>
               </div>
