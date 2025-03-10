@@ -546,7 +546,7 @@ p {
 .circle {
   width: 0.5vw;
   height: 0.5vw;
-  border-radius: 999;
+  border-radius: 999%;
   background-color: var(--dark-color);
   opacity: 0;
   transition: opacity 1s cubic-bezier(0.77, 0, 0.18, 1);
