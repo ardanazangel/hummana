@@ -176,7 +176,7 @@ export default function Values() {
           <div className="central-image-tracker">
             <div className="img">
               <Image
-                src="/images/carousel/practice-purpose-1.png"
+                src="/images/carousel/practice-purpose-1.webp"
                 width={600}
                 height={800}
                 alt="Practice purpose carousel image" // Añadido alt
@@ -184,7 +184,7 @@ export default function Values() {
             </div>
             <div className="img">
               <Image
-                src="/images/carousel/bewilling-toevolve-1.png"
+                src="/images/carousel/bewilling-toevolve-1.webp"
                 width={600}
                 height={800}
                 alt="Be willing to evolve - carousel image"
@@ -192,7 +192,7 @@ export default function Values() {
             </div>
             <div className="img">
               <Image
-                src="/images/carousel/find-your-truth-1.png"
+                src="/images/carousel/find-your-truth-1.webp"
                 width={600}
                 height={800}
                 alt="Find your truth - carousel image"
@@ -200,7 +200,7 @@ export default function Values() {
             </div>
             <div className="img">
               <Image
-                src="/images/carousel/practice-purpose-1.png"
+                src="/images/carousel/practice-purpose-1.webp"
                 width={600}
                 height={800}
                 alt="Practice purpose - carousel image"
@@ -214,7 +214,7 @@ export default function Values() {
         <div className="value-wrapper value-1">
           <div className="img">
             <Image
-              src="/images/carousel/practice-purpose-2.png"
+              src="/images/carousel/practice-purpose-2.webp"
               width={1920}
               height={1080}
               alt="Practice purpose - background image"
@@ -224,7 +224,7 @@ export default function Values() {
         <div className="value-wrapper value-2">
           <div className="img">
             <Image
-              src="/images/carousel/bewilling-toevolve-2.png"
+              src="/images/carousel/bewilling-toevolve-2.webp"
               width={1920}
               height={1080}
               alt="Be willing to evolve - background image"
@@ -234,7 +234,7 @@ export default function Values() {
         <div className="value-wrapper value-3">
           <div className="img">
             <Image
-              src="/images/carousel/find-your-truth-2.png"
+              src="/images/carousel/find-your-truth-2.webp"
               width={1920}
               height={1080}
               alt="Find your truth - background image"
@@ -244,7 +244,7 @@ export default function Values() {
         <div className="value-wrapper value-4">
           <div className="img">
             <Image
-              src="/images/carousel/practice-purpose-2.png"
+              src="/images/carousel/practice-purpose-2.webp"
               width={1920}
               height={1080}
               alt="Practice purpose - final background image"

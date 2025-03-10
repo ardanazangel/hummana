@@ -145,7 +145,7 @@ export default function GridSection() {
         <Image
           width={1920}
           height={1080}
-          src={"/images/mentorship/grid-section.png"}
+          src={"/images/mentorship/grid-section.webp"}
           alt="Grid steps background image"
         />
       </div>

@@ -192,7 +192,7 @@ export default function Hero() {
               left: 0,
               width: "100%",
               height: "100%",
-              background: "url('/images/thumb.jpg') center/cover no-repeat", // Imagen de carga
+              background: "url('/images/thumb.webp') center/cover no-repeat", // Imagen de carga
               zIndex: 0,
               opacity: 1,
               filter: "brightness(00.75)",

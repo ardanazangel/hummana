@@ -13,7 +13,7 @@ export default function FourPillarsModule({
         <Image
           width={1280}
           height={1920}
-          src={`/images/mentorship/four-pillars/${source}.png`}
+          src={`/images/mentorship/four-pillars/${source}.webp`}
           alt="health pillar background"
           style={{ filter: "brightness(.8)" }}
         />

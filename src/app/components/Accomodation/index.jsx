@@ -74,7 +74,7 @@ export default function Accomodation() {
           <Image
             width={720}
             height={1280}
-            src={"/images/retreat/accomodation/luxury-accomodation.jpg"}
+            src={"/images/retreat/accomodation/luxury-accomodation.webp"}
             alt="luxury accomodation images"
             style={{ position: "absolute" }}
             className="img1"
@@ -82,7 +82,7 @@ export default function Accomodation() {
           <Image
             width={720}
             height={1280}
-            src={"/images/retreat/accomodation/hotel-ecoluxury.jpg"}
+            src={"/images/retreat/accomodation/hotel-ecoluxury.webp"}
             alt="luxury accomodation images"
             style={{ position: "absolute" }}
             className="img2"
@@ -90,7 +90,7 @@ export default function Accomodation() {
           <Image
             width={720}
             height={1280}
-            src={"/images/retreat/accomodation/alimentacion-organica.jpg"}
+            src={"/images/retreat/accomodation/alimentacion-organica.webp"}
             alt="luxury accomodation images"
             style={{ position: "absolute" }}
             className="img3"

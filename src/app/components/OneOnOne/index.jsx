@@ -21,7 +21,7 @@ export default function OneOnOne() {
         <Image
           width={1920}
           height={1080}
-          src={"/images/mentorship/laura-vela.png"}
+          src={"/images/mentorship/laura-vela.webp"}
           alt="One on one mentorships with Laura Vela"
         />
       </div>

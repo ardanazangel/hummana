@@ -89,7 +89,7 @@ Laura es, también, practicante de meditación (maestra certificada), profesora 
             </div>
             <div className="img">
               <Image
-                src="/images/surf.png"
+                src="/images/surf.webp"
                 width={1920}
                 height={1080}
                 alt="Laura Vela surfeando"

@@ -79,7 +79,7 @@ export default function ActividadesRetreat() {
               <Image
                 src={`/images/retreat/activities/${activity
                   .toLowerCase()
-                  .replace(/ /g, "-")}.jpg`}
+                  .replace(/ /g, "-")}.webp`}
                 width={600}
                 height={600}
                 alt={activity}

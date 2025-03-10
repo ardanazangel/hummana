@@ -59,7 +59,7 @@ export default function TailoringMent() {
           <Image
             width={1280}
             height={1920}
-            src={"/images/mentorship/tailoring.png"}
+            src={"/images/mentorship/tailoring.webp"}
             alt="Tailoring your mentorship image"
           />
         </div>

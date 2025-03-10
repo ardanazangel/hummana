@@ -4,21 +4,21 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 const images = [
-  "/images/about-principal.png",
-  "/images/footer.png",
+  "/images/about-principal.webp",
+  "/images/footer.webp",
   "/images/mentorships.webp",
-  "/images/retreats.jpg",
-  "/images/surf.png",
-  "/images/about-principal.png",
-  "/images/footer.png",
+  "/images/retreats.webp",
+  "/images/surf.webp",
+  "/images/about-principal.webp",
+  "/images/footer.webp",
   "/images/mentorships.webp",
-  "/images/retreats.jpg",
-  "/images/surf.png",
-  "/images/about-principal.png",
-  "/images/footer.png",
+  "/images/retreats.webp",
+  "/images/surf.webp",
+  "/images/about-principal.webp",
+  "/images/footer.webp",
   "/images/mentorships.webp",
-  "/images/retreats.jpg",
-  "/images/surf.png",
+  "/images/retreats.webp",
+  "/images/surf.webp",
 ];
 
 export default function AboutImage() {

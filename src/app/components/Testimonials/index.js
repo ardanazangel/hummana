@@ -73,7 +73,7 @@ export default function Testimonial({ testimonials = [], vimeoId }) {
           <div className="img testimonial-img">
             <Image
               src={
-                testimonials[index].imagen || "/default-testimonial-image.jpg"
+                testimonials[index].imagen || "/default-testimonial-image.webp"
               }
               width={256}
               height={256}

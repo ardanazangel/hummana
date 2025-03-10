@@ -9,7 +9,7 @@ export default function Value() {
         <Image
           width={1920}
           height={1080}
-          src={"/images/retreat/thevalue.jpg"}
+          src={"/images/retreat/thevalue.webp"}
           alt="The value section background" // Añadido alt
           style={{ filter: "brightness(0.75)" }}
         />

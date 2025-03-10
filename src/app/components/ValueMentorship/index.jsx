@@ -9,7 +9,7 @@ export default function ValueMentorship() {
         <Image
           width={1080}
           height={720}
-          src={"/images/mentorship/value-mentorship.jpg"}
+          src={"/images/mentorship/value-mentorship.webp"}
           alt="The value mentorship section background" // Añadido alt
           style={{ filter: "brightness(0.7)" }}
         />

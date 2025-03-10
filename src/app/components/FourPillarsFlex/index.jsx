@@ -19,7 +19,7 @@ export default function FourPillarsFlex() {
             <Image
               width={1280 / 2}
               height={1920 / 2}
-              src={"/images/mentorship/four-pillars/relationships.png"}
+              src={"/images/mentorship/four-pillars/relationships.webp"}
               alt="Relationships background image"
             />
           </div>
@@ -38,7 +38,7 @@ export default function FourPillarsFlex() {
             <Image
               width={1280 / 2}
               height={1920 / 2}
-              src={"/images/mentorship/four-pillars/career.png"}
+              src={"/images/mentorship/four-pillars/career.webp"}
               alt="Career background image"
             />
           </div>
@@ -57,7 +57,7 @@ export default function FourPillarsFlex() {
             <Image
               width={1280 / 2}
               height={1920 / 2}
-              src={"/images/mentorship/four-pillars/wealth.png"}
+              src={"/images/mentorship/four-pillars/wealth.webp"}
               alt="Wealth background image"
             />
           </div>
@@ -76,7 +76,7 @@ export default function FourPillarsFlex() {
             <Image
               width={1280 / 2}
               height={1920 / 2}
-              src={"/images/mentorship/four-pillars/health.png"}
+              src={"/images/mentorship/four-pillars/health.webp"}
               alt="Health background image"
             />
           </div>

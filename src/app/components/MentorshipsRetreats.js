@@ -39,7 +39,7 @@ export default function MentorshipsRetreats() {
             </div>
             <div className="img">
               <Image
-                src="/images/retreats.jpg"
+                src="/images/retreats.webp"
                 width={1280}
                 height={1920}
                 alt="Group retreats program background image"
@@ -49,7 +49,6 @@ export default function MentorshipsRetreats() {
               />
               <div className="card">
                 <p className="small-title">RETREATS</p>
-
                 <p className="low-opacity">
                   Es más que un retiro. Es aventura, conexión y desarrollo
                   personal en el pulmón de Bali, Indonesia.
