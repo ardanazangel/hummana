@@ -25,8 +25,8 @@ export default function MentorshipHero() {
     <section id="mentorship-hero" ref={trigger}>
       <Image
         src={"/assets/images/mentorship/banner4.webp"}
-        width={300}
-        height={600}
+        width={1920}
+        height={1080}
         alt="Imagen Laura Vela Banner"
         ref={image}
       />
