@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "Juan Pérez",
+    "pais": "España",
+    "mensaje": "Excelente servicio y calidad."
+  },
+  {
+    "nombre": "Anna Kowalski",
+    "pais": "Polonia",
+    "mensaje": "Me encanta la experiencia de compra."
+  },
+  {
+    "nombre": "Lucas Silva",
+    "pais": "Brasil",
+    "mensaje": "Productos de primera calidad."
+  }
+]
