@@ -97,8 +97,8 @@ export default function HeroSumba() {
         <div id="hero-retreats-content">
           <Image
             src={"/assets/hero-creative.webp"}
-            width={600}
-            height={300}
+            width={1920}
+            height={1080}
             alt="Imagen de fondo retreats"
             ref={imagen}
           />
