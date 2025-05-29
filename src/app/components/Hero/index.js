@@ -128,6 +128,11 @@ export default function Hero() {
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
+            scrolling="no"
+            style={{
+              zIndex: -1,
+              overflow: "hidden",
+            }}
           ></iframe>
           <Image
             src={"/assets/images/thumb.webp"}
